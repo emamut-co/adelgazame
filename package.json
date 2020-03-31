@@ -1,0 +1,21 @@
+{
+  "name": "emamut",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:emamut_net/emamut.git",
+  "author": "Faber Vergara <fabervergara@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp prod"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
