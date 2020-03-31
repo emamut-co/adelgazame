@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.sass","main.css"],"names":[],"mappings":"AAEA;EACE,uBAAuB;ACDzB","file":"main.css","sourcesContent":["@import \"colors\";\n\nbody {\n  background-color: black; }\n","body {\n  background-color: black;\n}\n"]}
