@@ -16,4 +16,5 @@
 
     <?php $url = ''; if(!is_home()) $url = get_site_url(); ?>
 
-    <div ng-view>
+    <?php include('menu.php') ?>
+    <div class="container-fluid px-0">
