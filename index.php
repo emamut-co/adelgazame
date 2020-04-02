@@ -21,10 +21,20 @@
       </div>
     </div>
   </section>
-  <section class="mt">
+  <section class="container mt">
     <div class="row">
       <div class="col">
         <h2 class="text-center subtitle">¿Quiénes somos?</h2>
+        <div class="row row-cols-1 row-cols-md-2 mt-5">
+          <div class="col-2 mb-4">
+            <div class="card who">
+              <img src="https://via.placeholder.com/120" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Doctora</h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
