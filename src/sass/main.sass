@@ -1,9 +1,12 @@
 @import colors
 @import 'node_modules/bootstrap/scss/bootstrap'
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400700&family=Montserrat:wght@400700&display=swap')
+@import url('//fonts.googleapis.com/css2?family=Caveat:wght@400700&family=Montserrat:wght@400700&display=swap')
 
 body
   font-family: 'Montserrat', sans-serif
+
+.mt
+  margin-top: 5rem
 
 .navbar-main
   background: linear-gradient(to bottom, rgba(235, 128, 168, .9), rgba(235, 128, 168, .1))
@@ -21,6 +24,7 @@ body
       font-size: 5rem
   .carousel-controls-container
     background-color: $blue
-    height: 8rem
-    clip-path: url(#wave);
-    margin-top: -100px
+
+.subtitle
+  color: $blue
+  font-weight: bold

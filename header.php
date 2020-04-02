@@ -17,4 +17,4 @@
     <?php $url = ''; if(!is_home()) $url = get_site_url(); ?>
 
     <?php include('menu.php') ?>
-    <div class="container-fluid px-0 mt-5" id="app">
+    <div class="container-fluid px-0 mt-4" id="app">
