@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-light navbar-main" role="navigation">
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-light navbar-main" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<?php echo get_site_url() ?>">
       <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" class="img-fluid">
     </a>
     <?php
