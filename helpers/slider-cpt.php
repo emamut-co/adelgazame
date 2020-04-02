@@ -24,7 +24,7 @@ function slider()
     'label'                 => __( 'Slider', 'slider' ),
     'description'           => __( 'Slider Custom Post Type', 'slider' ),
     'labels'                => $labels,
-    'supports'              => array( 'author', 'revisions' ),
+    'supports'              => array( 'author', 'revisions', 'title' ),
     'hierarchical'          => false,
     'public'                => false,
     'show_ui'               => true,

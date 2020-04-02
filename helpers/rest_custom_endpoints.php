@@ -22,9 +22,10 @@ function get_slider()
   foreach ($post_array as $post)
   {
     $post->custom_fields = get_post_custom($post->ID);
-    $image = wp_get_attachment_image_src( $post->custom_fields['slide_slide'][0] , 'large' );
 
-    $slide_array[] = $image[0];
+    $post->custom_fields['slide_image'] = wp_get_attachment_image_src( $post->custom_fields['slide_image'][0] , 'large' )[0];
+
+    $slide_array[] = $post;
   }
 
   return $slide_array;

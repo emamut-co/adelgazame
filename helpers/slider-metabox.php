@@ -12,11 +12,31 @@ function slider_register_meta_boxes($meta_boxes)
     'fields'     => array(
       array(
         'name'              => 'Imagen',
-        'id'                => $prefix . 'slide',
+        'id'                => $prefix . 'image',
         'type'              => 'image_upload',
         'max_status'        => false,
         'max_file_uploads'  => 1,
         'image_size'        => 'medium'
+      ),
+      array(
+        'name'              => 'Texto',
+        'id'                => $prefix . 'text',
+        'type'              => 'wysiwyg',
+        'options'           => array (
+          'textarea_rows'   => 5,
+          'teeny'           => true,
+          'media_buttons'   => false
+        )
+      ),
+      array(
+        'name'              => 'Texto del botón',
+        'id'                => $prefix . 'button-text',
+        'type'              => 'text'
+      ),
+      array(
+        'name'              => 'URL del botón',
+        'id'                => $prefix . 'button-url',
+        'type'              => 'text'
       )
     )
   );
