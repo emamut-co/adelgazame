@@ -30,12 +30,12 @@ function slider_register_meta_boxes($meta_boxes)
       ),
       array(
         'name'              => 'Texto del botón',
-        'id'                => $prefix . 'button-text',
+        'id'                => $prefix . 'button_text',
         'type'              => 'text'
       ),
       array(
         'name'              => 'URL del botón',
-        'id'                => $prefix . 'button-url',
+        'id'                => $prefix . 'button_url',
         'type'              => 'text'
       )
     )
