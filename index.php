@@ -25,12 +25,17 @@
     <div class="row">
       <div class="col">
         <h2 class="text-center subtitle">¿Quiénes somos?</h2>
-        <div class="row row-cols-1 row-cols-md-2 mt-5">
-          <div class="col-2 mb-4">
+        <div class="row justify-content-center row-cols-1 row-cols-md-3 mt-5">
+          <div class="col mb-4">
             <div class="card who">
               <img src="https://via.placeholder.com/120" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Doctora</h5>
+              <div class="card-body text-center">
+                <h5 class="card-title mb-0">
+                  <small>Doctora</small><br>
+                  Karol Díaz
+                </h5>
+                <p class="card-text">Médico Obesóloga</p>
+                <p class="card-text mt-4">Médico con Alta Especialidad en Obesidad por la Universidad Nacional Autónoma de México.</p>
               </div>
             </div>
           </div>
