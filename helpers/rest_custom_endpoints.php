@@ -14,9 +14,6 @@ function get_slider()
   $post_array = new WP_Query($args);
 
   $slide_array = array();
-  if($post_array->post_count == 0)
-    return array( 'http://via.placeholder.com/1200x600', 'http://via.placeholder.com/1200x600' );
-
   $post_array = $post_array->posts;
 
   foreach ($post_array as $post)
@@ -24,9 +21,7 @@ function get_slider()
     $post->custom_fields = get_post_custom($post->ID);
 
     $post->custom_fields['slide_image'] = wp_get_attachment_image_src( $post->custom_fields['slide_image'][0] , 'large' )[0];
-
-    $slide_array[] = $post;
   }
 
-  return $slide_array;
+  return $post_array;
 }
