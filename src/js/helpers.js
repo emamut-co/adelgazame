@@ -1,5 +1,8 @@
 jQuery(document).ready(function ($) {
-  $(window).load(function () {
-    $('.loader').fadeOut();
-  });
+  $('#main-carousel-prev').on('click', function () {
+    $('#main-carousel').carousel('prev')
+  })
+  $('#main-carousel-next').on('click', function () {
+    $('#main-carousel').carousel('next')
+  })
 });

@@ -14,8 +14,8 @@
             </div>
           </div>
           <div class="carousel-controls-container py-4 pl-4">
-            <button class="btn btn-secondary text-white"><i class="fa fa-angle-left fa-2x"></i></button>
-            <button class="btn btn-secondary text-white"><i class="fa fa-angle-right fa-2x"></i></button>
+            <button class="btn btn-secondary text-white" id="main-carousel-prev"><i class="fa fa-angle-left fa-2x"></i></button>
+            <button class="btn btn-secondary text-white" id="main-carousel-next"><i class="fa fa-angle-right fa-2x"></i></button>
           </div>
         </div>
       </div>
