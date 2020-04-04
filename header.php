@@ -10,8 +10,8 @@
   </head>
   <body>
     <script>
-      wp_content = '<?php echo WP_CONTENT_URL ?>';
-      myTheme = '<?php echo get_template_directory_uri() ?>';
+      let siteURL = '<?php echo get_site_url() ?>';
+      let themePath = '<?php echo get_template_directory_uri() ?>';
     </script>
 
     <?php $url = ''; if(!is_home()) $url = get_site_url(); ?>

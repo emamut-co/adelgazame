@@ -9,12 +9,12 @@ let app = new Vue({
   mounted () {
     let self = this
 
-    axios.get('http://localhost/workspace/adelgazame/wp-json/slider/v1/get')
+    axios.get(siteURL + '/wp-json/slider/v1/get')
       .then(function (response) {
         self.sliderArray = response.data
       })
 
-    axios.get('http://localhost/workspace/adelgazame/wp-json/staff/v1/get')
+    axios.get(siteURL + '/wp-json/staff/v1/get')
       .then(function (response) {
         self.staffArray = response.data
       })
