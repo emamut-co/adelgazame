@@ -43,4 +43,12 @@
       </div>
     </div>
   </section>
+  <section class="mt">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center subtitle">Mapa</h2>
+        <div id="map" class="mt-5"></div>
+      </div>
+    </div>
+  </section>
 <?php get_footer() ?>
