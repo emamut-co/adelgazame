@@ -6,7 +6,6 @@ function my_theme_register_required_plugins()
    * If the source is NOT from the .org repo, then source is also required.
    */
   $plugins = array(
-
     array(
       'name'      => 'CodePress Admin Columns',
       'slug'      => 'codepress-admin-columns',
@@ -16,8 +15,17 @@ function my_theme_register_required_plugins()
       'name'      => 'MetaBox',
       'slug'      => 'meta-box',
       'required'  => true
+    ),
+    array(
+      'name'      => 'Contact Form 7',
+      'slug'      => 'contact-form-7',
+      'required'  => true
+    ),
+    array(
+      'name'      => 'Smart Slider 3',
+      'slug'      => 'smart-slider-3',
+      'required'  => true
     )
-
   );
 
   $config = array(

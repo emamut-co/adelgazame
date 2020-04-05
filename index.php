@@ -2,6 +2,7 @@
   <section>
     <div class="row">
       <div class="col">
+        <?php echo do_shortcode('[smartslider3 slider=2]'); ?>
       </div>
     </div>
   </section>
