@@ -8,8 +8,8 @@ body
 [v-cloak]
   display: none
 
-.mt
-  margin-top: 5rem
+.pt
+  padding-top: 5rem
 
 .text-rose
   color: $rose !important
@@ -17,8 +17,18 @@ body
 .text-blue
   color: $blue !important
 
-input.form-control
+input.form-control,
+input.wpcf7-form-control
   border-radius: 50rem
+  background: rgba(0, 0, 0, 0)
+  border: 1px solid $rose
+
+.wpcf7-form-control
+  width: 100%
+  padding-left: 1rem
+
+textarea.wpcf7-form-control
+  border-radius: 1rem
   background: rgba(0, 0, 0, 0)
   border: 1px solid $rose
 
@@ -42,6 +52,9 @@ input.form-control
 .subtitle
   color: $blue
   font-weight: bold
+  small
+    font-weight: bold
+    font-size: 1rem
 
 .card
   &.staff
@@ -55,8 +68,15 @@ input.form-control
     .card-text
       font-size: .8rem
 
+section
+  &.dark
+    background-color: #1D1934
+
 #map
   height: 70vh
+
+.form-title
+  font-family: 'Caveat', cursive
 
 footer
   background-color: #4A475C
