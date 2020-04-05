@@ -17,20 +17,29 @@ body
 .text-blue
   color: $blue !important
 
-input.form-control,
-input.wpcf7-form-control
-  border-radius: 50rem
+.wpcf7-form
+  p
+    margin-bottom: .5rem
+
+.form-control,
+.wpcf7-form-control
   background: rgba(0, 0, 0, 0)
   border: 1px solid $rose
+  @at-root
+    input#{&}
+      border-radius: 50rem
 
 .wpcf7-form-control
   width: 100%
   padding-left: 1rem
+  @at-root
+    textarea#{&}
+      border-radius: 1rem
+    input[type=submit]#{&}
+      background-color: $rose
 
-textarea.wpcf7-form-control
-  border-radius: 1rem
-  background: rgba(0, 0, 0, 0)
-  border: 1px solid $rose
+.wpcf-3-response-output
+  background-color: $white
 
 .navbar-main
   background: linear-gradient(to bottom, rgba(235, 128, 168, .9), rgba(235, 128, 168, .1))
