@@ -39,6 +39,17 @@ function staff_register_meta_boxes($meta_boxes)
           'teeny'           => true,
           'media_buttons'   => false
         )
+      ),
+      array(
+        'name'              => 'Página',
+        'id'                => $prefix . 'page',
+        'type'              => 'select',
+        'placeholder'       => 'Elija una página',
+        'options'           => array(
+          'balon-intragastrico' => 'Balón Intragástrico',
+          'nutricion'           => 'Nutrición',
+          'deportologia'        => 'Deportología'
+        )
       )
     )
   );

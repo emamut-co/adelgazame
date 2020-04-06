@@ -50,7 +50,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-calculator bg-dark py">
+  <section class="bg-dark py">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
