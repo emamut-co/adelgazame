@@ -25,38 +25,24 @@ body
 .wpcf7-form-control
   background: rgba(0, 0, 0, 0)
   border: 1px solid $rose
-  @at-root
-    input#{&}
-      border-radius: 50rem
+  border-radius: 1rem
 
 .wpcf7-form-control
   width: 100%
   padding-left: 1rem
+  &::placeholder
+    color: $gray
   @at-root
-    textarea#{&}
-      border-radius: 1rem
     input[type=submit]#{&}
       background-color: $rose
+    select#{&}
+      color: $gray
 
 .wpcf-3-response-output
   background-color: $white
 
 .navbar-main
   background: linear-gradient(to bottom, rgba(235, 128, 168, .9), rgba(235, 128, 168, .1))
-
-.carousel
-  position: relative
-  .carousel-caption
-    color: $black
-    width: 55%
-    left: 1rem
-    bottom: 8rem
-    text-align: initial
-    .title
-      font-family: 'Caveat', cursive
-      font-size: 4rem
-  .carousel-controls-container
-    background-color: $blue
 
 .subtitle
   color: $blue
