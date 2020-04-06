@@ -36,7 +36,7 @@
       </div>
     </div>
   </section>
-  <section class="pb-5 pt dark">
+  <section class="py dark">
     <div class="row">
       <div class="col">
         <h2 class="text-center subtitle text-rose">¡Llena el formulario <br><small class="text-white">y recibe atención personalizada!</small></h2>
