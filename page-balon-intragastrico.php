@@ -16,13 +16,13 @@
     <div class="container">
       <div class="row mt-5">
         <div class="col-md-4 text-center">
-          <img src="<?php echo get_template_directory_uri() ?>/img/1.png" alt="" class="img-fluid text-center">
+          <img src="<?php echo get_template_directory_uri() ?>/img/balon1.png" alt="" class="img-fluid text-center">
         </div>
         <div class="col-md-4 text-center">
-          <img src="<?php echo get_template_directory_uri() ?>/img/2.png" alt="" class="img-fluid text-center">
+          <img src="<?php echo get_template_directory_uri() ?>/img/balon2.png" alt="" class="img-fluid text-center">
         </div>
         <div class="col-md-4 text-center">
-          <img src="<?php echo get_template_directory_uri() ?>/img/3.png" alt="" class="img-fluid text-center">
+          <img src="<?php echo get_template_directory_uri() ?>/img/balon3.png" alt="" class="img-fluid text-center">
         </div>
       </div>
       <div class="row mt-5">
