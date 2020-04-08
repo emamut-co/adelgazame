@@ -43,9 +43,9 @@
       </div>
     </div>
     <div class="row justify-content-center mt-4">
-      <div class="col-md-4">
-        <p class="text-white w-50">
-          Asume el reto de <strong>sentirte</strong>
+      <div class="col-md-3">
+        <p class="text-white">
+          Asume el reto de <strong>sentirte</strong><br>
           y lucir como <strong>TÚ QUIERES</strong>.
         </p>
         <p class="text-white mt-4">
@@ -54,7 +54,7 @@
           en el tratamiento del sobrepeso y la obesidad.
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class="border border-secondary rounded p-4">
           <h3 class="text-center form-title text-blue mb-4">¡Te llamaremos!</h3>
           <?php echo do_shortcode('[contact-form-7 id="6" title="Principal"]'); ?>

@@ -25,7 +25,7 @@ body
   color: $blue !important
 
 .navbar-main
-  background: url(../img/fondo.png)
+  background: url(../img/fondo.png) repeat-x
   background-size: contain
 
 .wpcf7-form
@@ -35,20 +35,19 @@ body
 .n2-section-smartslider
   &.custom-css
     .n2-ss-slider
-      h5.n2-ow
-        color: $black !important
-        font-family: 'Caveat', cursive !important
-        font-size: 3rem !important
-        margin-left: 1.5rem
-      p.n2-ow
-        font-family: 'Montserrat', sans-serif !important
-        margin-left: 1.5rem
-      .n2-style-1101-heading
-        font-family: 'Montserrat', sans-serif !important
-        background: $blue !important
-        border-radius: 1rem !important
-        margin-left: 1.5rem
-        margin-top: 1.5rem
+      .n2-ss-layer-content
+        margin-left: 5rem
+        h5.n2-ow
+          color: $black !important
+          font-family: 'Caveat', cursive !important
+          font-size: 3rem !important
+        p.n2-ow
+          font-family: 'Montserrat', sans-serif !important
+        .n2-style-1101-heading
+          font-family: 'Montserrat', sans-serif !important
+          background: $blue !important
+          border-radius: 1rem !important
+          margin-top: 1.5rem
 
 .form-control,
 .wpcf7-form-control
@@ -59,13 +58,25 @@ body
 .wpcf7-form-control
   width: 100%
   padding-left: 1rem
+  background-color: rgba(0, 0, 0, 0)
+  color: #F5F5F5
   &::placeholder
     color: $gray
   @at-root
     input[type=submit]#{&}
       background-color: $rose
+      color: $black
     select#{&}
       color: $gray
+    select#{&}::after
+      content: ''
+      position: absolute;
+      width: 9px
+      height: 8px
+      top: 50%
+      right: 1em
+      margin-top: -4px
+      background: url(../img/select-picker.png)
 
 .wpcf-3-response-output
   background-color: $white
@@ -111,3 +122,5 @@ footer
     font-size: .75rem
   button
     font-size: .8rem !important
+
+@import responsive
