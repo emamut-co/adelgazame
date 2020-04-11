@@ -9,7 +9,7 @@ add_action( 'rest_api_init', function () {
 function get_slider()
 {
   $args = array(
-    'post_type' => 'slider',
+    'post_type' => 'slide',
   );
 
   $post_array = new WP_Query($args);
@@ -17,9 +17,14 @@ function get_slider()
 
   foreach ($post_array as $post)
   {
-    $post->custom_fields = get_post_custom($post->ID);
+    $post->post_image = get_the_post_thumbnail_url($post->ID);
 
-    $post->slide_image = get_the_post_thumbnail_url($post->ID);
+    $post->post_tags = array();
+    $tags = get_the_terms($post->ID, array('sliders-category'));
+    foreach ($tags as $key => $tag)
+        $post->post_tags[] = $tag->slug;
+
+    $post->custom_fields = get_post_custom($post->ID);
   }
 
   return $post_array;

@@ -1,12 +1,12 @@
 <?php
-function slider_register_meta_boxes($meta_boxes)
+function slide_register_meta_boxes($meta_boxes)
 {
   $prefix = 'slide_';
 
   $meta_boxes[] = array(
-    'id'         => 'slider',
-    'title'      => 'Slider',
-    'post_types' => 'slider',
+    'id'         => 'slide',
+    'title'      => 'Slide',
+    'post_types' => 'slide',
     'context'    => 'normal',
     'priority'   => 'high',
     'fields'     => array(
@@ -35,4 +35,4 @@ function slider_register_meta_boxes($meta_boxes)
 
   return $meta_boxes;
 }
-add_filter( 'rwmb_meta_boxes', 'slider_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'slide_register_meta_boxes' );

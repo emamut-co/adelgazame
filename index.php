@@ -5,7 +5,7 @@
         <div id="main-carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item" :class="{ 'active': key === 0 }" v-for="(slide, key) in sliderArray">
-              <img :src="slide.slide_image" class="d-block w-100" alt="...">
+              <img :src="slide.post_image" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block px-4">
                 <h5 class="title">{{ slide.post_title }}</h5>
                 <div v-html="slide.custom_fields.slide_text[0]"></div>
@@ -79,7 +79,4 @@
       </div>
     </div>
   </section>
-  <script>
-    let pageSlug = '<?php echo $post_name ?>'
-  </script>
 <?php get_footer() ?>
