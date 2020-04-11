@@ -18,8 +18,24 @@ body
   background: url(../img/fondo.png) repeat-x
   background-size: contain
   height: 110px
-  li:not(:first-child)
-    margin-left: 1.5rem
+  // li:not(:first-child)
+  //   margin-left: 1.5rem
+
+.carousel
+  position: relative
+  .carousel-item
+    max-height: 75vh
+  .carousel-caption
+    color: $black
+    width: 55%
+    left: 6rem
+    bottom: 5rem
+    text-align: initial
+    .title
+      font-family: 'Caveat', cursive
+      font-size: 4rem
+  .carousel-controls-container
+    background-color: $blue
 
 .wpcf7-form
   p

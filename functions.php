@@ -4,6 +4,9 @@ require_once dirname( __FILE__ ) . '/helpers/TGM-Plugin-Activation-2.6.1/class-t
 require_once dirname( __FILE__ ) . '/helpers/required-plugins.php';
 require_once dirname( __FILE__ ) . '/helpers/rest_custom_endpoints.php';
 
+require_once dirname( __FILE__ ) . '/helpers/CPT/slider-cpt.php';
+require_once dirname( __FILE__ ) . '/helpers/CPT/slider-metabox.php';
+
 require_once dirname( __FILE__ ) . '/helpers/CPT/staff-cpt.php';
 require_once dirname( __FILE__ ) . '/helpers/CPT/staff-metabox.php';
 
