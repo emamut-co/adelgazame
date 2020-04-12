@@ -39,6 +39,12 @@ function add_theme_scripts()
 
   wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
 
+  $components_folder = '/src/js/components/';
+  $files = array_diff(scandir(dirname( __FILE__ ) . $components_folder), array('.', '..'));
+
+  foreach($files as $key => $file)
+    wp_enqueue_script($file, get_template_directory_uri() . $components_folder . $file, array (), 1.1, true);
+
   wp_enqueue_script('app.js', get_template_directory_uri() . '/src/js/app.js', array (), 1.1, true);
   wp_enqueue_script('helpers.js', get_template_directory_uri() . '/src/js/helpers.js', array (), 1.1, true);
 }

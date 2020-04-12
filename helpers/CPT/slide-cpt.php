@@ -3,10 +3,10 @@
 function slide()
 {
   $labels = array(
-    'name'                => _x( 'Slide', 'Post Type General Name', 'slide' ),
+    'name'                => _x( 'Slides', 'Post Type General Name', 'slide' ),
     'singular_name'       => _x( 'Slide', 'Post Type Singular Name', 'slide' ),
-    'menu_name'           => __( 'Slide', 'slide' ),
-    'name_admin_bar'      => __( 'Slide', 'slide' ),
+    'menu_name'           => __( 'Slides', 'slide' ),
+    'name_admin_bar'      => __( 'Slides', 'slide' ),
     'parent_item_colon'   => __( 'Parent Item:', 'slide' ),
     'all_items'           => __( 'Todos Los Slides', 'slide' ),
     'add_new_item'        => __( 'Añadir Nuevo Slide', 'slide' ),
@@ -25,7 +25,7 @@ function slide()
     'description'           => __( 'Slide Custom Post Type', 'slide' ),
     'labels'                => $labels,
     'supports'              => array( 'author', 'revisions', 'title', 'thumbnail' ),
-    'taxonomies'            => array( 'sliders-category' ),
+    'taxonomies'            => array( 'slider' ),
     'hierarchical'          => false,
     'public'                => false,
     'show_ui'               => true,
@@ -50,11 +50,11 @@ add_action( 'init', 'slide', 0 );
 
 function tr_create_my_taxonomy() {
   register_taxonomy(
-    'sliders-category',
+    'slider',
     'slide',
     array(
-      'label' => __( 'Sliders' ),
-      'rewrite' => array( 'slug' => 'sliders-category' ),
+      'label' => __( 'Slider' ),
+      'rewrite' => array( 'slug' => 'slider' ),
       'hierarchical' => false,
     )
   );
@@ -65,7 +65,7 @@ add_filter( 'manage_slide_posts_columns', 'set_custom_edit_slide_columns' );
 function set_custom_edit_slide_columns($columns) {
   unset( $columns['author'] );
   $columns['slide_image'] = __( 'Image', 'slide' );
-  $columns['slide_tags'] = __( 'Sliders', 'slide' );
+  $columns['slide_tags'] = __( 'Slider', 'slide' );
 
   return $columns;
 }
@@ -77,7 +77,7 @@ function custom_slide_column( $column, $post_id ) {
       echo '<img src="' . get_the_post_thumbnail_url($post_id, 'thumbnail') . '">';
       break;
     case 'slide_tags' :
-      $tags = get_the_terms($post_id, array('sliders-category'));
+      $tags = get_the_terms($post_id, array('slider'));
       foreach ($tags as $key => $tag)
         echo $key > 0 ? ', ' . $tag->name : $tag->name;
       break;
