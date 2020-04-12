@@ -24,7 +24,7 @@ function staff()
     'label'                 => __( 'Staff', 'staff' ),
     'description'           => __( 'Staff Custom Post Type', 'staff' ),
     'labels'                => $labels,
-    'supports'              => array( 'author', 'revisions', 'title' ),
+    'supports'              => array( 'author', 'revisions', 'title', 'thumbnail' ),
     'hierarchical'          => false,
     'public'                => false,
     'show_ui'               => true,
@@ -46,3 +46,24 @@ function staff()
   register_post_type( 'staff', $args );
 }
 add_action( 'init', 'staff', 0 );
+
+add_filter( 'manage_staff_posts_columns', 'set_custom_edit_staff_columns' );
+function set_custom_edit_staff_columns($columns) {
+  $columns['staff_image'] = __( 'Image', 'staff' );
+  $columns['staff_title'] = __( 'Título', 'staff' );
+
+  return $columns;
+}
+
+add_action( 'manage_staff_posts_custom_column' , 'custom_staff_column', 10, 2 );
+function custom_staff_column( $column, $post_id ) {
+  switch ( $column ) {
+    case 'staff_image' :
+      echo '<img src="' . get_the_post_thumbnail_url($post_id, 'thumbnail') . '">';
+      break;
+    case 'staff_title' :
+      $custom_fields = get_post_custom($post_id);
+      echo $custom_fields['staff_treatment'][0];
+      break;
+  }
+}

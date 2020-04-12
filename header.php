@@ -14,7 +14,5 @@
       let themePath = '<?php echo get_template_directory_uri() ?>';
     </script>
 
-    <?php $url = ''; if(!is_home()) $url = get_site_url(); ?>
-
     <?php include('menu.php') ?>
     <div class="container-fluid px-0" id="app" v-cloak>

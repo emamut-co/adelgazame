@@ -2,7 +2,7 @@
   <section>
     <div class="row">
       <div class="col">
-        <?php echo do_shortcode('[smartslider3 slider=2]'); ?>
+        <custom-carousel slider="balon"></custom-carousel>
       </div>
     </div>
   </section>

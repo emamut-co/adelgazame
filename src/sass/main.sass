@@ -14,30 +14,32 @@ body
 .text-blue
   color: $blue !important
 
-.navbar-main
+#navbar-main
   background: url(../img/fondo.png) repeat-x
   background-size: contain
+  height: 110px
+  // li:not(:first-child)
+  //   margin-left: 1.5rem
+
+.carousel
+  position: relative
+  .carousel-item
+    max-height: 80vh
+  .carousel-caption
+    color: $black
+    width: 55%
+    left: 6rem
+    bottom: 5rem
+    text-align: initial
+    .title
+      font-family: 'Caveat', cursive
+      font-size: 4rem
+  .carousel-controls-container
+    background-color: $blue
 
 .wpcf7-form
   p
     margin-bottom: .5rem
-
-.n2-section-smartslider
-  &.custom-css
-    .n2-ss-slider
-      .n2-ss-layer-content
-        margin-left: 5rem
-        h5.n2-ow
-          color: $black !important
-          font-family: 'Caveat', cursive !important
-          font-size: 3rem !important
-        p.n2-ow
-          font-family: 'Montserrat', sans-serif !important
-        .n2-style-1101-heading
-          font-family: 'Montserrat', sans-serif !important
-          background: $blue !important
-          border-radius: 1rem !important
-          margin-top: 1.5rem
 
 .form-control,
 .wpcf7-form-control
