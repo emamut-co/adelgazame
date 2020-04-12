@@ -23,14 +23,6 @@ function staff_register_meta_boxes($meta_boxes)
         'placeholder'       => 'Médico'
       ),
       array(
-        'name'              => 'Imagen',
-        'id'                => $prefix . 'image',
-        'type'              => 'image_advanced',
-        'max_status'        => false,
-        'max_file_uploads'  => 1,
-        'image_size'        => 'medium'
-      ),
-      array(
         'name'              => 'Texto',
         'id'                => $prefix . 'text',
         'type'              => 'wysiwyg',

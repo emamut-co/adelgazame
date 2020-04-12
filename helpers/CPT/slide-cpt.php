@@ -63,7 +63,6 @@ add_action( 'init', 'tr_create_my_taxonomy' );
 
 add_filter( 'manage_slide_posts_columns', 'set_custom_edit_slide_columns' );
 function set_custom_edit_slide_columns($columns) {
-  unset( $columns['author'] );
   $columns['slide_image'] = __( 'Image', 'slide' );
   $columns['slide_tags'] = __( 'Slider', 'slide' );
 

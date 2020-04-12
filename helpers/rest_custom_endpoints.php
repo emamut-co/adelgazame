@@ -11,9 +11,11 @@ function get_slider($request)
   $args = array(
     'post_type'   => 'slide',
     'tax_query'   => array(
-      'taxonomy'  => 'slider',
-      'field'     => 'slug',
-      'terms'     => array( $request['slider'] )
+      array(
+        'taxonomy'  => 'slider',
+        'field'     => 'slug',
+        'terms'     => array( $request['slider'] )
+      )
     )
   );
   $post_array = new WP_Query($args);
@@ -54,8 +56,7 @@ function get_staff()
   foreach ($post_array as $post)
   {
     $post->custom_fields = get_post_custom($post->ID);
-
-    $post->custom_fields['staff_image'] = wp_get_attachment_image_src( $post->custom_fields['staff_image'][0] , 'large' )[0];
+    $post->post_image = get_the_post_thumbnail_url($post->ID);
   }
 
   return $post_array;
