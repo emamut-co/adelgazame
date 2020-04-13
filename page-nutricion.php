@@ -7,7 +7,7 @@
     </div>
   </section>
   <section class="py-5 dark">
-    <div class="row">
+    <div class="row pt-5">
       <div class="col">
         <h2 class="text-center text-rose subtitle">Beneficios</h2>
         <p class="text-center text-white">de la buena nutrición</p>
