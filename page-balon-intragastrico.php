@@ -6,8 +6,8 @@
       </div>
     </div>
   </section>
-  <section class="py-5 dark">
-    <div class="row">
+  <section class="py-5 dark wave-dark">
+    <div class="row pt-5">
       <div class="col">
         <h2 class="text-center text-rose subtitle">Beneficios y características</h2>
         <p class="text-center text-white">del balón gástrico</p>
@@ -54,9 +54,9 @@
       </div>
     </div>
   </section>
-  <section class="bg-dark py-5">
+  <section class="bg-calculadora py-5">
     <div class="container">
-      <div class="row">
+      <div class="row py-5">
         <div class="col-md-6">
           <div class="media">
             <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
@@ -80,9 +80,9 @@
       </div>
     </div>
   </section>
-  <section class="py-5">
+  <section class="py-5 wave-white">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center pb-5">
         <div class="col-md-5">
           <h2 class="text-center subtitle">¿Cuándo es necesario un balón intragástrico?</h2>
           <p class="mt-4">
@@ -96,7 +96,7 @@
       </div>
     </div>
   </section>
-  <section class="dark py-5">
+  <section class="dark py-5 wave-dark">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-5">
