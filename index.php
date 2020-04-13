@@ -7,7 +7,7 @@
     </div>
   </section>
   <section class="container pt-5">
-    <div class="row">
+    <div class="row mt-5">
       <div class="col">
         <h2 class="text-center subtitle">¿Quiénes somos?</h2>
         <staff-section></staff-section>
@@ -18,11 +18,11 @@
     <div class="row">
       <div class="col">
         <h2 class="text-center subtitle">Mapa</h2>
-        <div id="map" class="mt-5"></div>
+        <div id="map" class="mt-5 wave-white"></div>
       </div>
     </div>
   </section>
-  <section class="py-5 dark">
+  <section class="py-5 dark wave-dark">
     <div class="container">
       <div class="row">
         <div class="col">
