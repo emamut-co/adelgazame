@@ -22,20 +22,17 @@ body
   height: 5rem
   left: 0
   background-size: 100% 100% !important
-  z-index: 1000
+  z-index: 900
 
 .wave-blue, .wave-white, .wave-dark
   position: relative
 
-.wave-blue
-  &::before
-    @extend %wave
-    background: url(../img/waves/tran-blue.png)
-    top: -3.5rem
+.wave-carousel-blue
   &::after
     @extend %wave
-    background: url(../img/waves/blue-tran.png)
-    bottom: -3.5rem
+    background: url(../img/waves/carousel-blue.png)
+    z-index: auto
+    bottom: 0
 
 .wave-white
   &::before
@@ -70,14 +67,23 @@ body
   .carousel-caption
     color: $black
     width: 50%
-    left: 1rem
+    left: 5%
     bottom: 5rem
     text-align: initial
     .title
       font-family: 'Caveat', cursive
       font-size: 4rem
-  .carousel-controls-container
-    background-color: $blue
+
+.carousel-control-next,
+.carousel-control-prev
+  align-items: flex-end
+  width: 2rem
+  bottom: 1.5rem
+  top: unset
+  margin-left: 7%
+
+.carousel-control-next
+  left: 2rem
 
 .wpcf7-form
   p
