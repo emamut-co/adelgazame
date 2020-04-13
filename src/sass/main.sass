@@ -1,6 +1,7 @@
 @import colors
+
 @import 'node_modules/bootstrap/scss/bootstrap'
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;700&display=swap')
 
 body
   font-family: 'Montserrat', sans-serif
@@ -13,6 +14,38 @@ body
 
 .text-blue
   color: $blue !important
+
+.wave-blue, .wave-white, .wave-dark
+  position: relative
+  &::before, &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 5rem
+    left: 0
+    background-size: 100% 100% !important
+    z-index: 1000
+  &::before
+    background: url(../img/waves/tran-blue.png)
+    top: -3.5rem
+  &::after
+    background: url(../img/waves/blue-tran.png)
+    bottom: -3.5rem
+
+.wave-white
+  &::before
+    background: url(../img/waves/whi-tran.png)
+    top: -2rem
+  &::after
+    background: url(../img/waves/tran-dark.png)
+    bottom: -1.5rem
+
+.wave-dark
+  &::before
+    background: none
+  &::after
+    background: url(../img/waves/dark-tran.png)
+    bottom: -3.5rem
 
 #navbar-main
   background: url(../img/fondo.png) repeat-x
@@ -62,7 +95,7 @@ body
       color: $gray
     select#{&}::after
       content: ''
-      position: absolute;
+      position: absolute
       width: 9px
       height: 8px
       top: 50%
