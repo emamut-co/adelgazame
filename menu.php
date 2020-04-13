@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="<?php echo get_site_url() ?>">
-      <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" class="img-fluid">
+      <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" id="logo" alt="" class="img-fluid">
     </a>
     <?php
       wp_nav_menu( array(
