@@ -1,5 +1,9 @@
 Vue.component('customCarousel', {
-  props: ['slider'],
+  props: {
+    'slider': String,
+    'color': String,
+    default: 'blue'
+  },
   data: function () {
     return {
       sliderArray: [],
@@ -9,14 +13,20 @@ Vue.component('customCarousel', {
   mounted () {
     let self = this
 
-    console.log(this.slider)
     axios.get(siteURL + '/wp-json/slider/v1/get?slider=' + this.slider)
       .then(function (response) {
         self.sliderArray = response.data
       })
   },
+  methods: {
+    getClass: function () {
+      if(typeof this.color  !== 'undefined')
+        return 'wave-carousel-' + this.color
+      return 'wave-carousel-blue'
+    }
+  },
   template: `
-    <div id="main-carousel" class="carousel slide wave-carousel-blue" data-ride="carousel">
+    <div id="main-carousel" class="carousel slide" :class="getClass()" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item" :class="{ 'active': key === 0 }" v-for="(slide, key) in sliderArray">
           <img :src="slide.post_image" class="d-block w-100" alt="...">

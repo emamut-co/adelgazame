@@ -2,7 +2,7 @@
   <section>
     <div class="row">
       <div class="col">
-        <custom-carousel slider="nutricion"></custom-carousel>
+        <custom-carousel slider="nutricion" color="rose"></custom-carousel>
       </div>
     </div>
   </section>

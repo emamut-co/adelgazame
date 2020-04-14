@@ -17,7 +17,13 @@
     <?php include('menu.php') ?>
     <div class="container-fluid px-0" id="app" v-cloak>
       <ul id="social" class="d-none d-md-block">
-        <li><a href="<?php echo get_option('facebook') ?>"><i class="fab fa-facebook fa-2x text-white"></i></a></li>
-        <li><a href="<?php echo get_option('instagram') ?>"><i class="fab fa-instagram fa-2x text-white"></i></a></li>
-        <li><a href="<?php echo get_option('whatsapp') ?>"><i class="fab fa-whatsapp fa-2x text-white"></i></a></li>
+        <li>
+          <a href="<?php echo get_option('facebook') ?>" target="_blank"><i class="fab fa-facebook fa-2x text-white"></i></a>
+        </li>
+        <li>
+          <a href="<?php echo get_option('instagram') ?>" target="_blank"><i class="fab fa-instagram fa-2x text-white"></i></a>
+        </li>
+        <li>
+          <a href="<?php echo get_option('whatsapp') ?>" target="_blank"><i class="fab fa-whatsapp fa-2x text-white"></i></a>
+        </li>
       </ul>
