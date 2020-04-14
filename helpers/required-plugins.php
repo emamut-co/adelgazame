@@ -15,11 +15,6 @@ function my_theme_register_required_plugins()
       'name'      => 'Contact Form 7',
       'slug'      => 'contact-form-7',
       'required'  => true
-    ),
-    array(
-      'name'      => 'Smart Slider 3',
-      'slug'      => 'smart-slider-3',
-      'required'  => true
     )
   );
 

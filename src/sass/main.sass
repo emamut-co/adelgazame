@@ -15,35 +15,45 @@ body
 .text-blue
   color: $blue !important
 
+%wave
+  content: ''
+  position: absolute
+  width: 100%
+  height: 5rem
+  left: 0
+  background-size: 100% 100% !important
+  z-index: 900
+
 .wave-blue, .wave-white, .wave-dark
   position: relative
-  &::before, &::after
-    content: ''
-    position: absolute
-    width: 100%
-    height: 5rem
-    left: 0
-    background-size: 100% 100% !important
-    z-index: 1000
-  &::before
-    background: url(../img/waves/tran-blue.png)
-    top: -3.5rem
+
+.wave-carousel-blue
   &::after
-    background: url(../img/waves/blue-tran.png)
-    bottom: -3.5rem
+    @extend %wave
+    background: url(../img/waves/carousel-blue.png)
+    z-index: auto
+    bottom: 0
+
+.wave-carousel-rose
+  &::after
+    @extend %wave
+    background: url(../img/waves/carousel-rose.png)
+    z-index: auto
+    bottom: 0
 
 .wave-white
   &::before
+    @extend %wave
     background: url(../img/waves/whi-tran.png)
     top: -2rem
   &::after
+    @extend %wave
     background: url(../img/waves/tran-dark.png)
     bottom: -1.5rem
 
 .wave-dark
-  &::before
-    background: none
   &::after
+    @extend %wave
     background: url(../img/waves/dark-tran.png)
     bottom: -3.5rem
 
@@ -53,11 +63,9 @@ body
   background-repeat: no-repeat
 
 #navbar-main
-  background: url(../img/fondo.png) repeat-x
+  background: url(../img/bg-navbar.png) repeat-x
   background-size: contain
   height: 110px
-  // li:not(:first-child)
-  //   margin-left: 1.5rem
 
 .carousel
   position: relative
@@ -66,14 +74,23 @@ body
   .carousel-caption
     color: $black
     width: 50%
-    left: 1rem
+    left: 5%
     bottom: 5rem
     text-align: initial
     .title
       font-family: 'Caveat', cursive
       font-size: 4rem
-  .carousel-controls-container
-    background-color: $blue
+
+.carousel-control-next,
+.carousel-control-prev
+  align-items: flex-end
+  width: 2rem
+  bottom: 1.5rem
+  top: unset
+  margin-left: 7%
+
+.carousel-control-next
+  left: 2rem
 
 .wpcf7-form
   p
@@ -133,6 +150,18 @@ body
 section
   &.dark
     background-color: #1D1934
+
+#social
+  background: url(../img/bg-services.png) no-repeat
+  background-size: contain
+  position: fixed
+  top: 13rem
+  left: -1rem
+  z-index: 1000
+  list-style-type: none
+  padding: .5rem 1.5rem
+  li
+    margin-top: .5rem
 
 #map
   height: 70vh
