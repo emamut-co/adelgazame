@@ -13,6 +13,10 @@ jQuery(document).ready(function ($) {
         'height': '60px',
         'transition': transition
       })
+      $('#schedule-button').css({
+        'top': '3.5rem',
+        'transition': 'top 200ms ease-in-out'
+      })
     } else {
       $("#logo").css({
         'width': '100%',
@@ -22,8 +26,13 @@ jQuery(document).ready(function ($) {
         'height': '110px',
         'transition': transition
       })
+      $('#schedule-button').css({
+        'top': '6.5rem',
+        'transition': 'top 200ms ease-in-out'
+      })
     }
   }
 
+  $('#schedule-modal').modal('show')
   // $('#navbar-main li:not(:first-child)').addClass('ml-0 ml-md-4')
 })

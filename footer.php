@@ -39,6 +39,22 @@
         </div>
       </footer>
     </div>
+
+    <div class="modal fade" id="schedule-modal" tabindex="-1" role="dialog" aria-labelledby="schedule-modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border border-secondary rounded">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title caveat text-secondary ml-auto" id="schedule-modalLabel">Te llamaremos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <?php echo do_shortcode('[contact-form-7 id="6" title="Principal"]'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
     <?php wp_footer(); ?>
   </body>
 </html>
