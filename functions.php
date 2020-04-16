@@ -36,7 +36,7 @@ function add_theme_scripts() {
     wp_enqueue_script('map.js', get_template_directory_uri() . '/src/js/map.js', array (), 1.1, true);
   }
 
-  wp_enqueue_style('main', get_template_directory_uri() . '/main.css');
+  wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
 
   $components_folder = '/src/js/components/';
   $files = array_diff(scandir(dirname( __FILE__ ) . $components_folder), array('.', '..'));

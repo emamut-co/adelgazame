@@ -31,40 +31,40 @@ body
 .wave-carousel-blue
   &::after
     @extend %wave
-    background: url(img/waves/carousel-blue.png)
+    background: url(../img/waves/carousel-blue.png)
     z-index: auto
     bottom: 0
 
 .wave-carousel-rose
   &::after
     @extend %wave
-    background: url(img/waves/carousel-rose.png)
+    background: url(../img/waves/carousel-rose.png)
     z-index: auto
     bottom: 0
 
 .wave-white
   &::before
     @extend %wave
-    background: url(img/waves/whi-tran.png)
+    background: url(../img/waves/whi-tran.png)
     top: -2rem
   &::after
     @extend %wave
-    background: url(img/waves/tran-dark.png)
+    background: url(../img/waves/tran-dark.png)
     bottom: -1.5rem
 
 .wave-dark
   &::after
     @extend %wave
-    background: url(img/waves/dark-tran.png)
+    background: url(../img/waves/dark-tran.png)
     bottom: -3.5rem
 
 .bg-calculadora
-  background: url(img/bg-calculadora.png)
+  background: url(../img/bg-calculadora.png)
   background-size: cover
   background-repeat: no-repeat
 
 #navbar-main
-  background: url(img/bg-navbar.png) repeat-x
+  background: url(../img/bg-navbar.png) repeat-x
   background-size: contain
   height: 110px
 
@@ -145,21 +145,20 @@ body
   color: #F5F5F5
   &::placeholder
     color: $gray
-  // @at-root
-  //   input[type=submit]#&
-  //     background-color: $rose
-  //     color: $black
-  //   select#&
-  //     color: $gray
-  //   select#&::after
-  //     content: ''
-  //     position: absolute
-  //     width: 9px
-  //     height: 8px
-  //     top: 50%
-  //     right: 1em
-  //     margin-top: -4px
-  //     background: url(img/select-picker.png)
+  @at-root input[type=submit]#{&}
+    background-color: $rose
+    color: $black
+  @at-root select#{&}
+    color: $gray
+  @at-root select#{&}::after
+    content: ''
+    position: absolute
+    width: 9px
+    height: 8px
+    top: 50%
+    right: 1em
+    margin-top: -4px
+    background: url(../img/select-picker.png)
 
 .wpcf-3-response-output
   background-color: $white
@@ -188,7 +187,7 @@ section
     background-color: #1D1934
 
 #social
-  background: url(img/bg-services.png) no-repeat
+  background: url(../img/bg-services.png) no-repeat
   background-size: contain
   position: fixed
   top: 13rem
@@ -224,7 +223,7 @@ section
   font-size: 3rem
 
 .bg-calculator
-  background: url(img/bg-calculator.png)
+  background: url(../img/bg-calculator.png)
 
 footer
   background-color: #4A475C
