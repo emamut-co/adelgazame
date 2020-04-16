@@ -45,5 +45,6 @@ Vue.component('customCarousel', {
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+      <img :src="themePath + '/img/scroll-down.png'" id="scroll-down" alt="" class="img-fluid pulse"/>
     </div>`
 })

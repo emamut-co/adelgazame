@@ -27,3 +27,7 @@
           <a href="<?php echo get_option('whatsapp') ?>" target="_blank"><i class="fab fa-whatsapp fa-2x text-white"></i></a>
         </li>
       </ul>
+
+      <button class="bnt btn-dark py-1 rounded" data-toggle="modal" data-target="#schedule-modal" id="schedule-button">
+        <img src="<?php echo get_template_directory_uri() ?>/img/schedule-icon.png" alt="" class="img-fluid"> <strong> Agenda tu cita</strong>
+      </button>
