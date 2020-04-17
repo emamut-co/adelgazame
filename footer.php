@@ -41,7 +41,8 @@
     </div>
 
     <div class="modal fade" id="schedule-modal" tabindex="-1" role="dialog" aria-labelledby="schedule-modalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-dialog" role="document">
+        <h2 class="text-primary text-center mb-5">Agenda <span class="caveat text-white">ahora</span> tu cita</h2>
         <div class="modal-content border border-secondary rounded">
           <div class="modal-header border-bottom-0">
             <h5 class="modal-title caveat text-secondary ml-auto" id="schedule-modalLabel">Te llamaremos</h5>

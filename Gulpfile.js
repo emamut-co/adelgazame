@@ -14,7 +14,7 @@ function style() {
     .on("error", sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('css/', { mode: 0644 }))
+    .pipe(gulp.dest('.', { mode: 0644 }))
     .pipe(browserSync.stream());
 }
 

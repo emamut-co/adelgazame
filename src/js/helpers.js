@@ -33,6 +33,6 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  $('#schedule-modal').modal('show')
+  // $('#schedule-modal').modal('show')
   // $('#navbar-main li:not(:first-child)').addClass('ml-0 ml-md-4')
 })
