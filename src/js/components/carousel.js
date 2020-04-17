@@ -1,8 +1,10 @@
 Vue.component('customCarousel', {
   props: {
     'slider': String,
-    'color': String,
-    default: 'blue'
+    'color': {
+      type: String,
+      default: 'blue'
+    }
   },
   data: function () {
     return {

@@ -38,16 +38,18 @@ function get_slider($request)
 }
 
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'staff/v1', '/get', array(
+  register_rest_route( 'staff/v1/', 'get', array(
     'methods' => 'GET',
     'callback' => 'get_staff'
   ));
 });
 
-function get_staff()
+function get_staff($request)
 {
   $args = array(
-    'post_type' => 'staff',
+    'post_type'   => 'staff',
+    'meta_key'    => 'staff_page',
+    'meta_value'  => $request['page']
   );
 
   $post_array = new WP_Query($args);

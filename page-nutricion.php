@@ -6,6 +6,15 @@
       </div>
     </div>
   </section>
+  <section class="wave-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <staff-page page="nutricion"></staff-page>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="py-5 dark wave-dark">
     <div class="row pt-5">
       <div class="col">
