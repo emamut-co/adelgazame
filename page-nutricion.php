@@ -6,7 +6,7 @@
       </div>
     </div>
   </section>
-  <section class="py-5 dark">
+  <section class="py-5 dark wave-dark">
     <div class="row pt-5">
       <div class="col">
         <h2 class="text-center text-rose subtitle">Beneficios</h2>
@@ -55,9 +55,9 @@
       </div>
     </div>
   </section>
-  <section class="bg-dark py-5">
+  <section class="bg-calculadora py-5">
     <div class="container">
-      <div class="row">
+      <div class="row py-5">
         <div class="col-md-6">
           <div class="media">
             <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
@@ -81,11 +81,11 @@
       </div>
     </div>
   </section>
-  <section class="py-5">
+  <section class="py-5 wave-white">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-5">
-          <h2 class="text-center subtitle">¿Cuándo es necesario un balón intragástrico?</h2>
+          <h2 class="text-center subtitle">Conoce los servicios que tenemos para ti</h2>
           <p class="mt-4">
             Se aconseja este tratamiento para aquellas personas que padecen
             <strong>sobrepeso u obesidad</strong> (Índice de Masa Corporal IMC cercano o superior a 30 Kg / m2)
@@ -97,7 +97,7 @@
       </div>
     </div>
   </section>
-  <section class="dark py-5">
+  <section class="dark wave-dark py-5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-5">
