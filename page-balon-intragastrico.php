@@ -54,7 +54,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-calculadora wave-white-bottom py-5">
+  <section class="bg-calculator wave-white-bottom py-5">
     <div class="container">
       <div class="row py-5">
         <div class="col-md-6">

@@ -10,11 +10,11 @@ jQuery(document).ready(function ($) {
         'transition': transition
       })
       $("#navbar-main").css({
-        'height': '60px',
+        'height': '6rem',
         'transition': transition
       })
       $('#schedule-button').css({
-        'top': '3.5rem',
+        'top': '6.5rem',
         'transition': 'top 200ms ease-in-out'
       })
     } else {
@@ -23,11 +23,11 @@ jQuery(document).ready(function ($) {
         'transition': transition
       })
       $("#navbar-main").css({
-        'height': '110px',
+        'height': '10rem',
         'transition': transition
       })
       $('#schedule-button').css({
-        'top': '6.5rem',
+        'top': '10.5rem',
         'transition': 'top 200ms ease-in-out'
       })
     }
