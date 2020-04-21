@@ -2,10 +2,14 @@ Vue.component('customCarousel', {
   props: {
     'slider': String
   },
-  data: function () {
+  data () {
     return {
       sliderArray: [],
-      themePath: themePath
+      themePath: themePath,
+      window: {
+        width: 0,
+        height: 0
+      }
     }
   },
   mounted () {
@@ -16,11 +20,24 @@ Vue.component('customCarousel', {
         self.sliderArray = response.data
       })
   },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
+    }
+  },
   template: `
     <div id="main-carousel" class="carousel slide wave-carousel" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item" :class="{ 'active': key === 0 }" v-for="(slide, key) in sliderArray">
-          <img :src="slide.post_image" class="d-block w-100" alt="...">
+          <img :src="window.width >= 768 ? slide.post_image : slide.custom_fields.slide_mobile_image[0]" class="d-block w-100" alt="...">
           <div class="container">
             <div class="carousel-caption d-none d-md-block px-4">
               <h5 class="title">{{ slide.post_title }}</h5>

@@ -32,6 +32,8 @@ function get_slider($request)
         $post->post_tags[] = $tag->slug;
 
     $post->custom_fields = get_post_custom($post->ID);
+
+    $post->custom_fields['slide_mobile_image'] = wp_get_attachment_image_src( $post->custom_fields['slide_mobile_image'][0] , 'full' );
   }
 
   return $post_array;

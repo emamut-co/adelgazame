@@ -29,6 +29,12 @@ function slide_register_meta_boxes($meta_boxes)
         'name'              => 'URL del botón',
         'id'                => $prefix . 'button_url',
         'type'              => 'text'
+      ),
+      array(
+        'name'              => 'Imagen móvil',
+        'id'                => $prefix . 'mobile_image',
+        'type'              => 'image_advanced',
+        'max_file_uploads'  => 1
       )
     )
   );

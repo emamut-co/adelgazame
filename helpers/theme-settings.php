@@ -47,11 +47,10 @@ function theme_settings()
 }
 add_action('admin_init', 'theme_settings');
 
-add_action('admin_enqueue_scripts', 'my_admin_scripts');
-
-function my_admin_scripts()
-{
-  wp_enqueue_media();
-  wp_register_script('my-admin-js', get_template_directory_uri() . '/helpers/my-admin.js', array('jquery'));
-  wp_enqueue_script('my-admin-js');
-}
+// function my_admin_scripts()
+// {
+//   wp_enqueue_media();
+//   wp_register_script('my-admin-js', get_template_directory_uri() . '/helpers/my-admin.js', array('jquery'));
+//   wp_enqueue_script('my-admin-js');
+// }
+// add_action('admin_enqueue_scripts', 'my_admin_scripts');
