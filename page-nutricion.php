@@ -18,8 +18,8 @@
   <section class="py-5 dark wave-dark">
     <div class="row pt-5">
       <div class="col">
-        <h2 class="text-center text-rose subtitle">Beneficios</h2>
-        <p class="text-center text-white">de la buena nutrición</p>
+        <h2 class="text-center text-rose subtitle">Beneficios <br>
+        <small class="text-white">de la buena nutrición</small></h2>
       </div>
     </div>
     <div class="container">
