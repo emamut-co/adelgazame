@@ -70,10 +70,12 @@ body
   background: linear-gradient(to bottom, rgba(235, 128, 168, 1), rgba(255, 255, 255, 0))
   background-size: contain
   height: 10rem
-  .nav-link
-    margin-left: 1.5rem
-    a
-      color: #FFF
+  .menu-item
+    &.active
+      font-weight: bold
+    .nav-link
+      margin-left: 1.5rem
+      color: #FFF !important
 
 .carousel
   position: relative
@@ -81,7 +83,8 @@ body
     max-height: 95vh
   .carousel-caption
     color: #000
-    width: 50%
+    width: 45%
+    height: 20rem
     left: 5%
     top: 7rem
     text-align: initial
