@@ -12,7 +12,7 @@
     <script>
       let siteURL = '<?php echo get_site_url() ?>',
         themePath = '<?php echo get_template_directory_uri() ?>',
-        mapCoordinates = '<?php echo get_option('coordinates') ?>'
+        mapCoordinates = '<?php echo get_option('coordinates') ?>';
     </script>
 
     <?php include('menu.php') ?>
