@@ -33,6 +33,11 @@ function display_whatsapp()
   <input name="whatsapp" id="whatsapp" placeholder="https://wa.me/" value="<?php echo get_option('whatsapp'); ?>">
 <?php }
 
+function display_coordinates()
+{ ?>
+  <input name="coordinates" id="coordinates" placeholder="0.00000, 0.00000" value="<?php echo get_option('coordinates'); ?>">
+<?php }
+
 function theme_settings()
 {
   add_settings_section( 'first_section', 'Redes Sociales', '', 'theme-options');
@@ -41,9 +46,14 @@ function theme_settings()
   add_settings_field('instagram', 'Instagram', 'display_instagram', 'theme-options', 'first_section');
   add_settings_field('whatsapp', 'Whatsapp', 'display_whatsapp', 'theme-options', 'first_section');
 
+  add_settings_section( 'second_section', 'Coordenadas', '', 'theme-options');
+
+  add_settings_field('coordinates', 'Coordenadas', 'display_coordinates', 'theme-options', 'second_section');
+
   register_setting( 'theme-options-grp', 'facebook');
   register_setting( 'theme-options-grp', 'instagram');
   register_setting( 'theme-options-grp', 'whatsapp');
+  register_setting( 'theme-options-grp', 'coordinates');
 }
 add_action('admin_init', 'theme_settings');
 
