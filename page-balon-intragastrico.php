@@ -82,10 +82,14 @@
   </section>
   <section class="py-5 wave-white">
     <div class="container">
-      <div class="row justify-content-center pb-5">
-        <div class="col-md-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
           <h2 class="text-center subtitle">¿Cuándo es necesario un balón intragástrico?</h2>
-          <p class="mt-4">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4 pb-5">
+        <div class="col-md-5">
+          <p>
             Se aconseja este tratamiento para aquellas personas que padecen
             <strong>sobrepeso u obesidad</strong> (Índice de Masa Corporal IMC cercano o superior a 30 Kg / m2)
           </p>
