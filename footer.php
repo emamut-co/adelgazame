@@ -4,8 +4,8 @@
             <div class="col-md-4">
               <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" class="img-fluid">
               <p class="mt-2">
-                <a href="#" class="text-blue"><i class="fab fa-facebook fa-2x mr-2"></i></a>
-                <a href="#" class="text-blue"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="<?php echo get_option('facebook') ?>" class="text-blue"><i class="fab fa-facebook fa-2x mr-2"></i></a>
+                <a href="<?php echo get_option('instagram') ?>" class="text-blue"><i class="fab fa-instagram fa-2x"></i></a>
               </p>
               <p class="mt-5 text-white">
                 <a href="#" class="text-white">Términos y condiciones</a> | <a href="#" class="text-white">Política de privacidad</a>
@@ -47,7 +47,7 @@
           <div class="modal-header border-bottom-0">
             <h5 class="modal-title caveat text-secondary ml-auto" id="schedule-modalLabel">Te llamaremos</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true"><img src="<?php echo get_template_directory_uri() ?>/img/close-icon.png" alt="" class="img-fluid"></span>
             </button>
           </div>
           <div class="modal-body">
