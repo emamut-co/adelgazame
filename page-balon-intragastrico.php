@@ -103,8 +103,12 @@
   <section class="dark py-5 wave-dark">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-8">
           <h2 class="text-center text-rose subtitle">Agenda <span class="caveat text-white">ahora</span> tu cita</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-5">
           <div class="border border-secondary rounded p-4 mt-4">
             <h3 class="text-center form-title text-blue mb-4">¡Te llamaremos!</h3>
             <?php echo do_shortcode('[contact-form-7 id="6" title="Principal"]'); ?>

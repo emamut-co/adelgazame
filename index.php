@@ -2,7 +2,7 @@
   <section>
     <div class="row">
       <div class="col">
-        <custom-carousel slider="main"></custom-carousel>
+        <custom-carousel></custom-carousel>
       </div>
     </div>
   </section>

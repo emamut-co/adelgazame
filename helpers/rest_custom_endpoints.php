@@ -10,13 +10,6 @@ function get_slider($request)
 {
   $args = array(
     'post_type'   => 'slide',
-    'tax_query'   => array(
-      array(
-        'taxonomy'  => 'slider',
-        'field'     => 'slug',
-        'terms'     => array( $request['slider'] )
-      )
-    )
   );
   $post_array = new WP_Query($args);
 

@@ -48,23 +48,23 @@ function slide()
 }
 add_action( 'init', 'slide', 0 );
 
-function tr_create_my_taxonomy() {
-  register_taxonomy(
-    'slider',
-    'slide',
-    array(
-      'label' => __( 'Slider' ),
-      'rewrite' => array( 'slug' => 'slider' ),
-      'hierarchical' => false,
-    )
-  );
-}
-add_action( 'init', 'tr_create_my_taxonomy' );
+// function tr_create_my_taxonomy() {
+//   register_taxonomy(
+//     'slider',
+//     'slide',
+//     array(
+//       'label' => __( 'Slider' ),
+//       'rewrite' => array( 'slug' => 'slider' ),
+//       'hierarchical' => false,
+//     )
+//   );
+// }
+// add_action( 'init', 'tr_create_my_taxonomy' );
 
 add_filter( 'manage_slide_posts_columns', 'set_custom_edit_slide_columns' );
 function set_custom_edit_slide_columns($columns) {
   $columns['slide_image'] = __( 'Image', 'slide' );
-  $columns['slide_tags'] = __( 'Slider', 'slide' );
+  // $columns['slide_tags'] = __( 'Slider', 'slide' );
 
   return $columns;
 }
@@ -75,10 +75,10 @@ function custom_slide_column( $column, $post_id ) {
     case 'slide_image' :
       echo '<img src="' . get_the_post_thumbnail_url($post_id, 'thumbnail') . '">';
       break;
-    case 'slide_tags' :
-      $tags = get_the_terms($post_id, array('slider'));
-      foreach ($tags as $key => $tag)
-        echo $key > 0 ? ', ' . $tag->name : $tag->name;
-      break;
+    // case 'slide_tags' :
+    //   $tags = get_the_terms($post_id, array('slider'));
+    //   foreach ($tags as $key => $tag)
+    //     echo $key > 0 ? ', ' . $tag->name : $tag->name;
+    //   break;
   }
 }

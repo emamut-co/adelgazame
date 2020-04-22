@@ -1,7 +1,4 @@
 Vue.component('customCarousel', {
-  props: {
-    'slider': String
-  },
   data () {
     return {
       sliderArray: [],
@@ -15,7 +12,7 @@ Vue.component('customCarousel', {
   mounted () {
     let self = this
 
-    axios.get(siteURL + '/wp-json/slider/v1/get?slider=' + this.slider)
+    axios.get(siteURL + '/wp-json/slider/v1/get')
       .then(function (response) {
         self.sliderArray = response.data
       })
