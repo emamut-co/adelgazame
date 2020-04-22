@@ -42,7 +42,7 @@
           </p>
         </div>
         <div class="col-md-4">
-          <div class="border border-secondary rounded p-4">
+          <div class="border border-secondary contact-form-container p-4">
             <h3 class="text-center form-title text-blue mb-4">¡Te llamaremos!</h3>
             <?php echo do_shortcode('[contact-form-7 id="6" title="Principal"]'); ?>
           </div>
