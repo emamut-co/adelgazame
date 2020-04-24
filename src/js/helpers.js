@@ -34,5 +34,7 @@ jQuery(document).ready(function ($) {
   }
 
   // $('#schedule-modal').modal('show')
-  // $('#navbar-main li:not(:first-child)').addClass('ml-0 ml-md-4')
+  $('#navbar-main').find('.collapse.navbar-collapse').append(`
+    <span class="navbar-text"><i class="fas fa-search"></i></span>
+  `)
 })
