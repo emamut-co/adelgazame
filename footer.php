@@ -29,8 +29,7 @@
             </div>
             <div class="col-md-4">
               <p class="text-white"><strong>SUSCRÍBETE A NUESTRO BOLETÍN </strong></p>
-              <input type="email" name="" class="form-control" placeholder="Email">
-              <button class="btn btn-primary mt-2 px-4 rounded-pill">SUSCRIBIRME</button>
+              <?php echo do_shortcode('[contact-form-7 id="113" title="Suscribe"]') ?>
               <p class="mt-5 text-white">
                 Copyright <i class="far fa-copyright"></i> 2020 | Development by <a href="#" class="text-white"><strong>Gestión</strong></a>
               </p>
