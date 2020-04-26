@@ -29,6 +29,6 @@
         </li>
       </ul>
 
-      <button class="btn btn-dark py-2 d-none d-md-block" data-toggle="modal" data-target="#schedule-modal" id="schedule-button">
-        <img src="<?php echo get_template_directory_uri() ?>/img/schedule-icon.png" alt="" class="img-fluid"> <strong> Agenda tu cita</strong>
+      <button class="btn btn-dark py-2 px-3 d-none d-md-block" data-toggle="modal" data-target="#schedule-modal" id="schedule-button">
+        <img src="<?php echo get_template_directory_uri() ?>/img/schedule-icon.png" alt="" class="img-fluid"> <strong class="ml-2"> Agenda tu cita</strong>
       </button>
