@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  // $('#schedule-modal').modal('show')
+  $('#schedule-modal').modal('show')
   $('#navbar-main').find('.collapse.navbar-collapse').append(`
     <span class="navbar-text"><i class="fas fa-search"></i></span>
   `)
