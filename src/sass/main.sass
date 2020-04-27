@@ -46,6 +46,12 @@ body
     background: url(./img/waves/tran-dark.png)
     bottom: -1.5rem
 
+.wave-dark-bottom
+  &::after
+    @extend %wave
+    background: url(./img/waves/tran-dark.png)
+    bottom: 2.5rem
+
 .wave-dark
   &::after
     @extend %wave
@@ -62,7 +68,12 @@ body
 .btn
   border-radius: .65rem
 
+section
+  &.dark
+    background-color: $dark-purple
+
 .contact-form-container
+  background-color: $dark-purple
   border-radius: 2rem
 
 #navbar-main
@@ -103,6 +114,32 @@ body
     margin-left: 8rem
   .carousel-control-next
     left: 2rem
+
+.page-main-image
+  height: 95vh
+  background-size: cover
+  background-repeat: no-repeat
+  .side-container
+    width: 25%
+    position: absolute
+    top: 20rem
+    right: 25rem
+    .subtitle
+      font-size: 2.5rem
+      color: #000
+      .caveat
+        font-size: 3.5rem
+        font-weight: normal
+    ul
+      padding-inline-start: 0
+      list-style-type: none
+      margin-left: 1rem
+      li
+        &::before
+          display: inline-block
+          content: "-"
+          width: 1rem
+          margin-left: -1rem
 
 
 #scroll-down
@@ -178,10 +215,6 @@ body
     .card-text
       font-size: .8rem
 
-section
-  &.dark
-    background-color: #1D1934
-
 #social
   background: url(img/bg-services.png) no-repeat
   background-size: cover
@@ -196,7 +229,7 @@ section
     margin-top: .5rem
 
 #schedule-button
-  background-color: #1D1934
+  background-color: $dark-purple
   position: fixed
   right: 22%
   top: 10.5rem
