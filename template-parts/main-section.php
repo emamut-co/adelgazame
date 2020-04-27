@@ -8,6 +8,7 @@
           <?php echo do_shortcode('[contact-form-7 id="6" title="Principal"]'); ?>
         </div>
       </div>
+      <img src="<?php echo get_template_directory_uri() . '/img/scroll-down.png' ?>" id="scroll-down" alt="" class="img-fluid pulse"/>
     </div>
   </div>
 </section>

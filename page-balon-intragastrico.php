@@ -73,11 +73,14 @@
           <p>
             También para quienes han <strong>fracasado repetitivamente con tratamientos dietéticos</strong>, farmacológicos y de modificación de la conducta. La colocación del balón rompe el círculo vicioso que se crea cuando un paciente no es capaz de mantener un régimen de forma continuada.
           </p>
+          <div class="text-center mt-4">
+            <a href="#schedule-form" class="btn btn-secondary">Agendar una cita</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="dark py-5 wave-dark">
+  <section class="dark py-5 wave-dark" id="schedule-form">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
