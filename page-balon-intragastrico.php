@@ -1,24 +1,13 @@
-<?php get_header(); ?>
-  <section class="wave-dark-bottom">
-    <div class="row">
-      <div class="col page-main-image" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post_id) ) ?>)">
-        <div class="side-container">
-          <h2 class="subtitle">
-            Baja de peso <span class="caveat text-secondary">ahora</span> sin cirugía Balón intragástrico
-          </h2>
-          <ul class="mt-4">
-            <li>Un procedimiento eficaz, indoloro y mínimamente invasivo</li>
-            <li>Permite bajar de peso rápido y de forma segura</li>
-            <li>En apenas 6 meses, puedes llegar a perder hasta 20 kg</li>
-          </ul>
-          <div class="contact-form-container p-4 mt-4">
-            <h3 class="text-center form-title text-blue mb-4">¡Te llamaremos!</h3>
-            <?php echo do_shortcode('[contact-form-7 id="6" title="Principal"]'); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php get_header();
+  set_query_var('sideContent', '<h2 class="subtitle">
+          Baja de peso <span class="caveat text-secondary">ahora</span> sin cirugía Balón intragástrico
+        </h2>
+        <ul class="mt-4">
+          <li>Un procedimiento eficaz, indoloro y mínimamente invasivo</li>
+          <li>Permite bajar de peso rápido y de forma segura</li>
+          <li>En apenas 6 meses, puedes llegar a perder hasta 20 kg</li>
+        </ul>');
+  get_template_part('template-parts/main-section'); ?>
   <section class="py-5 dark wave-dark">
     <div class="row pt-5">
       <div class="col">
@@ -27,12 +16,12 @@
       </div>
     </div>
     <div class="container">
-      <div class="row mt-5">
+      <div class="row mt-5 pt-5">
         <div class="col-md-4 text-white">
           <div class="w-100 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/balon1.png" alt="" class="img-fluid">
           </div>
-          <p class="mt-3">
+          <p class="my-5 py-3">
             <small>
               El Balón Intragástrico es un balón de silicona suave, que se introduce desinflado en el estómago a través de la boca, sin necesidad de cirugía y bajo sedación. Luego se llena con una solución estéril hasta alcanzar el tamaño adecuado. El tiempo en colocar el balón oscila entre 20 y 30 minutos.
               Es un procedimiento ambulatorio, por lo que el paciente podrá regresar a casa al cabo de unas horas.
@@ -43,7 +32,7 @@
           <div class="w-100 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/balon2.png" alt="" class="img-fluid">
           </div>
-          <p class="mt-3">
+          <p class="my-5 py-3">
             <small>
               Para obtener mayores beneficios, se recomienda que este procedimiento vaya acompañado de la
               incorporación de hábitos saludables y una alimentación balanceada, bajo la supervisión de especialistas.
@@ -56,7 +45,7 @@
           <div class="w-100 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/balon3.png" alt="" class="img-fluid">
           </div>
-          <p class="mt-3">
+          <p class="my-5 py-3">
             <small>
               La colocación del balón intragástrico permite a los pacientes con sobrepeso y obesidad alcanzar su peso ideal en poco tiempo.
               La reducción de peso y medidas representa un beneficio integral para la salud porque no solo
@@ -67,32 +56,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-calculator wave-white-bottom py-5">
-    <div class="container">
-      <div class="row py-5">
-        <div class="col-md-6">
-          <div class="media">
-            <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
-            <div class="media-body">
-              <h5 class="mt-0 text-white">
-                Calculadora de <br>
-                <strong>
-                  Índice de Masa Corporal <br>
-                  (IMC)
-                </strong>
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <p class="text-white">Se utiliza para estimar la cantidad de grasa corporal que tiene una
-          persona, y determinar por tanto si el peso está dentro del rango normal, o por el
-          contrario, se tiene sobrepeso o delgadez.</p>
-          <button class="btn btn-secondary mt-3">Conoce tu IMC</button>
-        </div>
-      </div>
-    </div>
-  </section>
+  <?php get_template_part('template-parts/calculator-section') ?>
   <section class="py-5 wave-white">
     <div class="container">
       <div class="row justify-content-center">

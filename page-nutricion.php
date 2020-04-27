@@ -1,24 +1,13 @@
-<?php get_header(); ?>
-  <section class="wave-dark-bottom">
-    <div class="row">
-      <div class="col page-main-image" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post_id) ) ?>)">
-        <div class="side-container">
-          <h2 class="subtitle">
-            Baja de peso <span class="caveat text-secondary">ahora</span> sin cirugía Balón intragástrico
-          </h2>
-          <ul class="mt-4">
-            <li>Un procedimiento eficaz, indoloro y mínimamente invasivo</li>
-            <li>Permite bajar de peso rápido y de forma segura</li>
-            <li>En apenas 6 meses, puedes llegar a perder hasta 20 kg</li>
-          </ul>
-          <div class="contact-form-container p-4 mt-4">
-            <h3 class="text-center form-title text-blue mb-4">¡Te llamaremos!</h3>
-            <?php echo do_shortcode('[contact-form-7 id="6" title="Principal"]'); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php get_header();
+  set_query_var('sideContent', '<h2 class="subtitle">
+          Aliméntate sin <span class="caveat text-secondary">condiciones</span>
+        </h2>
+        <ul class="mt-4">
+          <li>Aprende a comer deliciosamente nutritivo</li>
+          <li>Mejora tu salud con una alimentación correcta</li>
+          <li>Nutre tu día a día</li>
+        </ul>');
+  get_template_part('template-parts/main-section'); ?>
   <!-- <section class="wave-white py-5">
     <div class="container">
       <div class="row">
@@ -77,32 +66,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-calculator wave-white-bottom py-5">
-    <div class="container">
-      <div class="row py-5">
-        <div class="col-md-6">
-          <div class="media">
-            <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
-            <div class="media-body">
-              <h5 class="mt-0 text-white">
-                Calculadora de <br>
-                <strong>
-                  Índice de Masa Corporal <br>
-                  (IMC)
-                </strong>
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <p class="text-white">Se utiliza para estimar la cantidad de grasa corporal que tiene una
-          persona, y determinar por tanto si el peso está dentro del rango normal, o por el
-          contrario, se tiene sobrepeso o delgadez.</p>
-          <button class="btn btn-secondary mt-3">Conoce tu IMC</button>
-        </div>
-      </div>
-    </div>
-  </section>
+  <?php get_template_part('template-parts/calculator-section') ?>
   <section class="py-5 wave-white">
     <div class="container">
       <div class="row justify-content-center">
