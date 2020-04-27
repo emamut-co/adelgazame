@@ -33,6 +33,12 @@ function staff_register_meta_boxes($meta_boxes)
         )
       ),
       array(
+        'name'              => 'Imagen grande',
+        'id'                => $prefix . 'big_image',
+        'type'              => 'image',
+        'max_file_uploads'  => 1
+      ),
+      array(
         'name'              => 'Página',
         'id'                => $prefix . 'page',
         'type'              => 'select',

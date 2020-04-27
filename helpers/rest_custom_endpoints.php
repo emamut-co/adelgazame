@@ -54,6 +54,7 @@ function get_staff($request)
   {
     $post->custom_fields = get_post_custom($post->ID);
     $post->post_image = get_the_post_thumbnail_url($post->ID);
+    $post->custom_fields['staff_big_image_url'] = wp_get_attachment_image_src( $post->custom_fields['staff_big_image'][0] , 'full' );
   }
 
   return $post_array;

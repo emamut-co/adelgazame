@@ -6,8 +6,10 @@
           <li>Un procedimiento eficaz, indoloro y mínimamente invasivo</li>
           <li>Permite bajar de peso rápido y de forma segura</li>
           <li>En apenas 6 meses, puedes llegar a perder hasta 20 kg</li>
-        </ul>');
-  get_template_part('template-parts/main-section'); ?>
+        </ul>'); ?>
+  <section class="wave-dark-bottom">
+    <?php get_template_part('template-parts/main-section'); ?>
+  </section>
   <section class="py-5 dark wave-dark">
     <div class="row pt-5">
       <div class="col">

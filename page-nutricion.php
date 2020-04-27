@@ -6,9 +6,11 @@
           <li>Aprende a comer deliciosamente nutritivo</li>
           <li>Mejora tu salud con una alimentación correcta</li>
           <li>Nutre tu día a día</li>
-        </ul>');
-  get_template_part('template-parts/main-section'); ?>
-  <!-- <section class="wave-white py-5">
+        </ul>'); ?>
+  <section>
+    <?php get_template_part('template-parts/main-section'); ?>
+  </section>
+  <section class="wave-white py-5">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -16,7 +18,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <section class="py-5 dark wave-dark">
     <div class="row pt-5">
       <div class="col">
