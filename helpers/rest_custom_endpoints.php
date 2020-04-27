@@ -58,3 +58,31 @@ function get_staff($request)
 
   return $post_array;
 }
+
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'plans/v1/', 'get', array(
+    'methods' => 'GET',
+    'callback' => 'get_plans'
+  ));
+});
+
+function get_plans($request)
+{
+  $args = array(
+    'post_type'     => 'plans',
+    'tax_query'     =>
+      array(
+        'taxonomy'  => 'category',
+        'field'     => 'slug',
+        'terms'     => $request['page']
+      )
+  );
+
+  $post_array = new WP_Query($args);
+  $post_array = $post_array->posts;
+
+  foreach ($post_array as $post)
+    $post->post_image = get_the_post_thumbnail_url($post->ID);
+
+  return $post_array;
+}

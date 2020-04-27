@@ -11,6 +11,9 @@ require_once dirname( __FILE__ ) . '/helpers/CPT/slide-metabox.php';
 require_once dirname( __FILE__ ) . '/helpers/CPT/staff-cpt.php';
 require_once dirname( __FILE__ ) . '/helpers/CPT/staff-metabox.php';
 
+require_once dirname( __FILE__ ) . '/helpers/CPT/plans-cpt.php';
+// require_once dirname( __FILE__ ) . '/helpers/CPT/staff-metabox.php';
+
 add_theme_support( 'post-thumbnails' );
 
 function emamut_setup() {

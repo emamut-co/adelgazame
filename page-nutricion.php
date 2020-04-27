@@ -25,12 +25,12 @@
       </div>
     </div>
     <div class="container">
-      <div class="row mt-5">
+      <div class="row mt-5 pt-5">
         <div class="col-md-4 text-white">
           <div class="w-100 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/nutricion1.png" alt="" class="img-fluid">
           </div>
-          <p class="mt-3">
+          <p class="my-5 py-3">
             <small>
               Alimentarse de manera saludable permite mantener la mente despierta. El cerebro necesita determinados
               nutrientes para llevar a cabo sus funciones, por lo que llevar una dieta adecuada permite el flujo
@@ -42,7 +42,7 @@
           <div class="w-100 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/nutricion2.png" alt="" class="img-fluid">
           </div>
-          <p class="mt-3">
+          <p class="my-5 py-3">
             <small>
               La selección adecuada de los productos que ingerimos proporciona una mayor capacidad de respuesta
               del sistema inmune, lo que permite que éste se defienda eficientemente de los agentes extraños.
@@ -54,7 +54,7 @@
           <div class="w-100 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/nutricion3.png" alt="" class="img-fluid">
           </div>
-          <p class="mt-3">
+          <p class="my-5 py-3">
             <small>
               Determinados nutrientes como el hierro, ácido fólico, algunas vitaminas del grupo B, o los ácidos
               grasos omega-3, influyen en nuestro estado de ánimo. En esto radica la importancia de llevar una
@@ -70,15 +70,13 @@
   <section class="py-5 wave-white">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-8">
           <h2 class="text-center subtitle">Conoce los servicios que tenemos para ti</h2>
-          <p class="mt-4">
-            Se aconseja este tratamiento para aquellas personas que padecen
-            <strong>sobrepeso u obesidad</strong> (Índice de Masa Corporal IMC cercano o superior a 30 Kg / m2)
-          </p>
-          <p>
-            También para quienes han <strong>fracasado repetitivamente con tratamientos dietéticos</strong>, farmacológicos y de modificación de la conducta. La colocación del balón rompe el círculo vicioso que se crea cuando un paciente no es capaz de mantener un régimen de forma continuada.
-          </p>
+        </div>
+      </row>
+      <div class="row justify-content-center mt-4 pb-5">
+        <div class="col-md-8">
+          <plans-section></plans-section>
         </div>
       </div>
     </div>
