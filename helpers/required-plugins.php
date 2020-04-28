@@ -15,6 +15,11 @@ function my_theme_register_required_plugins()
       'name'      => 'Contact Form 7',
       'slug'      => 'contact-form-7',
       'required'  => true
+    ),
+    array(
+      'name'      => 'WP-Live Chat by 3CX',
+      'slug'      => 'wp-live-chat-support',
+      'required'  => true
     )
   );
 
