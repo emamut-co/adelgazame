@@ -43,11 +43,11 @@ Vue.component('customCarousel', {
         </div>
       </div>
       <a v-if="sliderArray.length > 1" class="carousel-control-prev" href="#main-carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <img :src="themePath + '/img/angle-left.png'" alt="" class="img-fluid"/>
         <span class="sr-only">Previous</span>
       </a>
       <a v-if="sliderArray.length > 1" class="carousel-control-next" href="#main-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <img :src="themePath + '/img/angle-right.png'" alt="" class="img-fluid"/>
         <span class="sr-only">Next</span>
       </a>
       <img :src="themePath + '/img/scroll-down.png'" id="scroll-down" alt="" class="img-fluid pulse"/>
