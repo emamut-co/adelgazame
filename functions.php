@@ -12,7 +12,6 @@ require_once dirname( __FILE__ ) . '/helpers/CPT/staff-cpt.php';
 require_once dirname( __FILE__ ) . '/helpers/CPT/staff-metabox.php';
 
 require_once dirname( __FILE__ ) . '/helpers/CPT/plans-cpt.php';
-// require_once dirname( __FILE__ ) . '/helpers/CPT/staff-metabox.php';
 
 add_theme_support( 'post-thumbnails' );
 
@@ -31,7 +30,7 @@ function add_theme_scripts() {
   wp_enqueue_script('vue', '//cdn.jsdelivr.net/npm/vue/dist/vue.js', array (), 1.1, true);
   wp_enqueue_script('axios', '//cdn.jsdelivr.net/npm/axios/dist/axios.min.js', array (), 1.1, true);
 
-  if ( is_home() ) {
+  if ( is_front_page() ) {
     wp_enqueue_style('leaflet', '//unpkg.com/leaflet@1.6.0/dist/leaflet.css', array(), '1.1', 'all');
     wp_enqueue_script('leaflet', '//unpkg.com/leaflet@1.6.0/dist/leaflet.js', array (), 1.1, true);
     wp_enqueue_script('leaflet-provider', '//cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.9.1/leaflet-providers.min.js', array (), 1.1, true);
