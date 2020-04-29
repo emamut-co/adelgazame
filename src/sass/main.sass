@@ -99,10 +99,32 @@ section
     .nav-link
       margin-left: 1.5rem
       color: #FFF !important
-  .navbar-text
-    margin-left: 1.5rem
-    color: #FFF !important
-    cursor: pointer
+
+#search-button
+  margin-left: 1.5rem
+  color: #FFF !important
+  cursor: pointer
+
+#search-form
+  width: 0
+  overflow: hidden
+  -webkit-transition: width 2s ease-in-out
+  -moz-transition: width 2s ease-in-out
+  -o-transition: width 2s ease-in-out
+  transition: width 2s ease-in-out
+  input
+    border-right: none !important
+    &::placeholder
+      font-size: .8rem
+      color: $gray
+  .input-group-text
+    background-color: transparent
+    border: 1px solid $rose
+    border-left: none !important
+    i
+      cursor: pointer
+#search-form.show
+  width: auto
 
 .carousel
   position: relative

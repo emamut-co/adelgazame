@@ -35,8 +35,31 @@ jQuery(document).ready(function ($) {
 
   // $('#schedule-modal').modal('show')
   $('#navbar-main').find('.collapse.navbar-collapse').append(`
-    <span class="navbar-text"><i class="fas fa-search"></i></span>
+    <form action="${siteURL}" method="get" id="search-form">
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Deseo saber sobre…" name="s" class="form-control" aria-label="close" aria-describedby="input-addon" />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">
+            <i class="fas fa-search"></i> <i class="fas fa-times ml-2"></i>
+          </span>
+        </div>
+      </div>
+    </form>
+    <span class="navbar-text" id="search-button"><i class="fas fa-search"></i></span>
   `)
+
+  $('#search-button').on('click', function (e) {
+    toggleClass()
+  })
+
+  $('#search-form').find('i').on('click', function (e) {
+    if($(this).hasClass('fa-search')) {
+      $('#search-form').submit()
+    }
+    if($(this).hasClass('fa-times')) {
+      toggleClass()
+    }
+  })
 
   // Select all links with hashes
   $('a[href*="#"]')
@@ -74,4 +97,9 @@ jQuery(document).ready(function ($) {
         }
       }
     });
+
+  function toggleClass() {
+    $('#search-form').toggleClass('show')
+    $('#search-button').toggleClass('d-none')
+  }
 })
