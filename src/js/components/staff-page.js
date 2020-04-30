@@ -25,7 +25,7 @@ Vue.component('staffPage', {
           <div class="col-md-6 my-auto">
             <h5 class="text-primary align-self-center">
               <small class="text-muted">{{ staff.custom_fields.staff_treatment[0] }}</small><br>
-              {{ staff.post_title }}
+              <strong>{{ staff.post_title }}</strong>
             </h5>
             <p>{{ staff.custom_fields.staff_degree[0] }}</p>
             <p class="mt-4" v-html="staff.custom_fields.staff_text[0]"></p>

@@ -33,11 +33,9 @@
             <img src="<?php echo get_template_directory_uri() ?>/img/nutricion1.png" alt="" class="img-fluid">
           </div>
           <p class="my-5 py-3">
-            <small>
               Alimentarse de manera saludable permite mantener la mente despierta. El cerebro necesita determinados
               nutrientes para llevar a cabo sus funciones, por lo que llevar una dieta adecuada permite el flujo
               constante de dichos nutrientes, generando un óptimo funcionamiento del organismo.
-            </small>
           </p>
         </div>
         <div class="col-md-4 text-white">
@@ -45,11 +43,9 @@
             <img src="<?php echo get_template_directory_uri() ?>/img/nutricion2.png" alt="" class="img-fluid">
           </div>
           <p class="my-5 py-3">
-            <small>
               La selección adecuada de los productos que ingerimos proporciona una mayor capacidad de respuesta
               del sistema inmune, lo que permite que éste se defienda eficientemente de los agentes extraños.
               Así se reduce el riesgo de padecer infecciones.
-            </small>
           </p>
         </div>
         <div class="col-md-4 text-white">
@@ -57,12 +53,10 @@
             <img src="<?php echo get_template_directory_uri() ?>/img/nutricion3.png" alt="" class="img-fluid">
           </div>
           <p class="my-5 py-3">
-            <small>
               Determinados nutrientes como el hierro, ácido fólico, algunas vitaminas del grupo B, o los ácidos
               grasos omega-3, influyen en nuestro estado de ánimo. En esto radica la importancia de llevar una
               dieta variada, pues con la cantidad necesaria de nutrientes, se mantendrá el equilibrio en nuestro
               estado de ánimo y una actitud positiva en nosotros.
-            </small>
           </p>
         </div>
       </div>

@@ -81,6 +81,9 @@ body
 .btn
   border-radius: .65rem
 
+.mt-expand
+  margin-top: 100px
+
 section
   &.dark
     background-color: $dark-purple
@@ -139,7 +142,7 @@ section
     text-align: initial
     .title
       font-family: 'Caveat', cursive
-      font-size: 3.5rem
+      font-size: 4rem
   .carousel-control-next,
   .carousel-control-prev
     align-items: flex-end
@@ -160,7 +163,7 @@ section
     top: 20rem
     right: 25rem
     .subtitle
-      font-size: 2.5rem
+      font-size: 3rem
       color: #000
       .caveat
         font-size: 3.5rem
@@ -197,12 +200,19 @@ section
   padding-left: 1rem
   background-color: rgba(0, 0, 0, 0)
   color: #F5F5F5
+  margin-bottom: .5rem
   &::placeholder
     color: $gray
     text-align: center
   @at-root input[type=submit]#{&}
     background-color: $rose
     color: #000
+    width: auto !important
+    padding-left: 1rem
+    padding-right: 1rem
+    margin-left: auto
+    margin-right: auto
+    display: block
   @at-root select#{&}
     color: $gray
     text-align-last: center
@@ -218,6 +228,13 @@ section
 
 .wpcf-3-response-output
   background-color: #FFF
+
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors
+  border: 1px solid $rose
+  border-radius: .75rem
+  color: #FFF
+  font-size: .8rem
 
 .subtitle
   color: $blue
@@ -240,6 +257,8 @@ section
     .card-text
       font-size: .8rem
   &.plans
+    h5
+      font-size: 1.5rem
     @extend %list
     ul
       li
@@ -292,6 +311,8 @@ section
   background-position: center
   h5
     font-size: 2.5rem
+  p
+    font-size: 1rem
 
 footer
   background-color: #4A475C

@@ -17,7 +17,7 @@ Vue.component('plansSection', {
       <div class="col mb-4" v-for="(plan, key) in plansArray">
         <div class="card plans">
           <img :src="plan.post_image" alt="" class="card-img-top">
-          <div class="card-body">
+          <div class="card-body bg-light">
             <h5 class="card-title mb-0">
               <small>Plan para bajar de peso</small><br>
               <span class="text-secondary"><strong>{{ plan.post_title }}</strong></span>
