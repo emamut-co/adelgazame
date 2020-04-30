@@ -7,7 +7,7 @@
           <li>Nos adaptamos a tus horarios</li>
           <li>Mejora tu calidad de vida</li>
         </ul>'); ?>
-  <section>
+  <section class="wave-white-bottom">
     <?php get_template_part('template-parts/main-section'); ?>
   </section>
   <section class="wave-white py-5">
@@ -88,7 +88,7 @@
   </section>
   <section class="dark wave-dark py-5">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mt-expand">
         <div class="col-md-5">
           <h2 class="text-center text-rose subtitle">Agenda <span class="caveat text-white">ahora</span> tu cita</h2>
 
