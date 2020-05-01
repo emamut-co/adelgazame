@@ -20,9 +20,7 @@ Vue.component('staffSection', {
         return 'text-blue'
     },
     getSlideItems(key) {
-      console.log("getSlideItems -> key", key)
-      return `
-        <div class="col mb-4">
+      let textVar = `<div class="col-md-6">
           <div class="card staff">
             <img src="` + this.getArrayElement(key, 'post_image') + `" alt="" class="card-img-top">
             <div class="card-body text-center">
@@ -34,8 +32,26 @@ Vue.component('staffSection', {
               <p class="card-text mt-4">` + this.getArrayElement(key, 'staff_text') + `</p>
             </div>
           </div>
-        </div>
-      `
+        </div>`
+
+      if(typeof this.staffArray[key] !== 'undefined') {
+        key++
+        textVar += `<div class="col-md-6">
+          <div class="card staff">
+            <img src="` + this.getArrayElement(key, 'post_image') + `" alt="" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-0 ` + this.getTitleClass(key) + `">
+                <small>` + this.getArrayElement(key, 'staff_treatment') + `</small><br>
+                ` + this.getArrayElement(key, 'post_title') + `
+              </h5>
+              <p class="card-text">` + this.getArrayElement(key, 'staff_degree') + `</p>
+              <p class="card-text mt-4">` + this.getArrayElement(key, 'staff_text') + `</p>
+            </div>
+          </div>
+        </div>`
+      }
+
+      return textVar
     },
     getArrayElement(key, item) {
       key -= 1
@@ -59,8 +75,8 @@ Vue.component('staffSection', {
   template: `
     <div class="carousel slide" data-ride="carousel" id="staff-carousel">
       <div class="carousel-inner">
-        <div class="row justify-content-center row-cols-1 row-cols-md-3 mt-5 carousel-item" :class="{'active': key == 1}" v-for="key in staffArray.length">
-          <div v-html="getSlideItems(key)"></div>
+        <div class="row justify-content-center mt-5 carousel-item" :class="{'active': key == 1}" v-for="key in staffArray.length">
+          <div class="mb-4" v-html="getSlideItems(key)"></div>
         </div>
       </div>
       <a class="carousel-control-prev" href="#staff-carousel" role="button" data-slide="prev">
