@@ -61,6 +61,10 @@ jQuery(document).ready(function ($) {
     }
   })
 
+  $('.VueCarousel-navigation-prev, .VueCarousel-navigation-next').css('padding', '6rem')
+  $('.VueCarousel-navigation-prev').html(`<img src="${themePath}/img/angle-left-gray.png" alt="" class="img-fluid"/>`)
+  $('.VueCarousel-navigation-next').html(`<img src="${themePath}/img/angle-right-gray.png" alt="" class="img-fluid"/>`)
+
   // Select all links with hashes
   $('a[href*="#"]')
     // Remove links that don't actually link to anything

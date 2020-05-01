@@ -10,7 +10,30 @@
     <div class="row mt-5">
       <div class="col">
         <h2 class="text-center subtitle">¿Quiénes somos?</h2>
-        <staff-section></staff-section>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+          <carousel :per-page="2"
+            :autoplay="true"
+            :autoplay-timeout="4000"
+            :loop="true"
+            pagination-color="#707070"
+            pagination-active-color="#2A7DE1"
+            :navigation-enabled="true">
+            <slide class="p-2" v-for="(staff, key) in staffArray" :key="key">
+              <b-card :title="staffArray[key].custom_fields.staff_treatment[0]"
+                :sub-title="staffArray[key].post_title"
+                :img-src="staffArray[key].post_image"
+                img-alt="Image" img-top class="staff" tag="article">
+                <b-card-text>
+                  <p class="card-text text-center" v-html="staffArray[key].custom_fields.staff_degree[0]"></p>
+                  <p class="card-text" v-html="staffArray[key].custom_fields.staff_text[0]"></p>
+                </b-card-text>
+              </b-card>
+            </slide>
+          </carousel>
+        </div>
       </div>
     </div>
   </section>
