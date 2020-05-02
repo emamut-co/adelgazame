@@ -12,81 +12,43 @@ Vue.component('staffSection', {
         self.staffArray = response.data
       })
   },
+  components: {
+    'carousel': VueCarousel.Carousel,
+    'slide': VueCarousel.Slide
+  },
   methods: {
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
+    },
     getTitleClass: function (key) {
       if (key % 2 === 0)
-        return 'text-rose'
+        return 'rose'
       else
-        return 'text-blue'
-    },
-    getSlideItems(key) {
-      let textVar = `<div class="col-md-6">
-          <div class="card staff">
-            <img src="` + this.getArrayElement(key, 'post_image') + `" alt="" class="card-img-top">
-            <div class="card-body text-center">
-              <h5 class="card-title mb-0 ` + this.getTitleClass(key) + `">
-                <small>` + this.getArrayElement(key, 'staff_treatment') + `</small><br>
-                ` + this.getArrayElement(key, 'post_title') + `
-              </h5>
-              <p class="card-text">` + this.getArrayElement(key, 'staff_degree') + `</p>
-              <p class="card-text mt-4">` + this.getArrayElement(key, 'staff_text') + `</p>
-            </div>
-          </div>
-        </div>`
-
-      if(typeof this.staffArray[key] !== 'undefined') {
-        key++
-        textVar += `<div class="col-md-6">
-          <div class="card staff">
-            <img src="` + this.getArrayElement(key, 'post_image') + `" alt="" class="card-img-top">
-            <div class="card-body text-center">
-              <h5 class="card-title mb-0 ` + this.getTitleClass(key) + `">
-                <small>` + this.getArrayElement(key, 'staff_treatment') + `</small><br>
-                ` + this.getArrayElement(key, 'post_title') + `
-              </h5>
-              <p class="card-text">` + this.getArrayElement(key, 'staff_degree') + `</p>
-              <p class="card-text mt-4">` + this.getArrayElement(key, 'staff_text') + `</p>
-            </div>
-          </div>
-        </div>`
-      }
-
-      return textVar
-    },
-    getArrayElement(key, item) {
-      key -= 1
-
-      if(item === 'post_image')
-        return this.staffArray[key].post_image
-
-      if(item === 'staff_treatment')
-        return this.staffArray[key].custom_fields.staff_treatment[0]
-
-      if(item === 'post_title')
-        return this.staffArray[key].post_title
-
-      if(item === 'staff_degree')
-        return this.staffArray[key].custom_fields.staff_degree[0]
-
-      if(item === 'staff_text')
-        return this.staffArray[key].custom_fields.staff_text[0]
+        return 'blue'
     }
   },
   template: `
-    <div class="carousel slide" data-ride="carousel" id="staff-carousel">
-      <div class="carousel-inner">
-        <div class="row justify-content-center mt-5 carousel-item" :class="{'active': key == 1}" v-for="key in staffArray.length">
-          <div class="mb-4" v-html="getSlideItems(key)"></div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#staff-carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#staff-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+    <carousel :per-page="2"
+      :autoplay="true"
+      :autoplay-timeout="4000"
+      :loop="true"
+      pagination-color="#707070"
+      pagination-active-color="#2A7DE1"
+      :navigation-enabled="true">
+      <slide class="p-2" v-for="(staff, key) in staffArray" :key="key">
+        <b-card :title="staff.custom_fields.staff_treatment[0]"
+          :sub-title="staff.post_title"
+          :img-src="staff.post_image"
+          img-alt="Image" img-top class="staff" :class="getTitleClass(key)" tag="article">
+          <b-card-text>
+            <p class="card-text text-center" v-html="staff.custom_fields.staff_degree[0]"></p>
+            <p class="card-text" v-html="staff.custom_fields.staff_text[0]"></p>
+          </b-card-text>
+        </b-card>
+      </slide>
+    </carousel>
     `
 })

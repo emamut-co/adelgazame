@@ -250,6 +250,7 @@ div.wpcf7-validation-errors
     border-color: #DEDEDE
     overflow: hidden
     border-radius: 1.5rem
+  &.staff
     .card-body
       h4.card-title
         color: $gray
@@ -262,11 +263,12 @@ div.wpcf7-validation-errors
           text-align: center
           margin-bottom: .2rem !important
           font-weight: bold
-        &.text-muted
-          @include even()
-            color: $rose !important
-          @include odd()
-            color: $blue !important
+    &.rose
+      .card-subtitle.text-muted
+        color: $rose !important
+    &.blue
+      .card-subtitle.text-muted
+          color: $blue !important
 
       .card-text
         font-size: .8rem

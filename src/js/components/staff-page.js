@@ -4,7 +4,7 @@ Vue.component('staffPage', {
   },
   data: function () {
     return {
-      staffArray: []
+      staff: {}
     }
   },
   mounted() {
@@ -12,12 +12,12 @@ Vue.component('staffPage', {
 
     axios.get(siteURL + '/wp-json/staff/v1/get?page=' + this.page)
       .then(function (response) {
-        self.staffArray = response.data
+        self.staff = response.data[0]
       })
   },
   template: `
     <div class="row justify-content-center mt-5">
-      <div col-md-12 v-for="(staff, key) in staffArray">
+      <div class="col-md-12">
         <div class="row">
           <div class="col-md-6">
             <img :src="staff.custom_fields.staff_big_image_url[0]" class="img-fluid" alt="">
