@@ -12,24 +12,40 @@ Vue.component('plansSection', {
         self.plansArray = response.data
       })
   },
+  components: {
+    'carousel': VueCarousel.Carousel,
+    'slide': VueCarousel.Slide
+  },
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
+    }
+  },
   template: `
-    <div class="row justify-content-center row-cols-1 row-cols-md-2 mt-5">
-      <div class="col mb-4" v-for="(plan, key) in plansArray">
+    <carousel :per-page="2"
+      :autoplay="true"
+      :autoplay-timeout="4000"
+      :loop="true"
+      pagination-color="#707070"
+      pagination-active-color="#2A7DE1"
+      :navigation-enabled="true">
+      <slide class="p-2" v-for="(plan, key) in plansArray" :key="key">
         <div class="card plans">
-          <img :src="plan.post_image" alt="" class="card-img-top">
-          <div class="card-body bg-light">
-            <h5 class="card-title mb-0">
-              <small>Plan para bajar de peso</small><br>
-              <span class="text-secondary"><strong>{{ plan.post_title }}</strong></span>
-            </h5>
-            <div class="card-text mt-2 text-muted" v-html="plan.post_content"></div>
-            <div class="text-center w-100">
-              <button class="btn btn-secondary" data-toggle="modal" data-target="#schedule-modal">
+          <b-card title="Plan para bajar de peso"
+            :sub-title="plan.post_title"
+            :img-src="plan.post_image"
+            img-alt="Image" img-top class="plans bg-light" tag="article">
+            <b-card-text class="mt-2">
+              <p class="card-text mt-2 text-muted" v-html="plan.post_content"></p>
+              <button class="btn btn-secondary d-block mx-auto" data-toggle="modal" data-target="#schedule-modal">
                 ¡Lo quiero!
               </button>
-            </div>
-          </div>
+            </b-card-text>
+          </b-card>
         </div>
-      </div>
-    </div>`
+      </slide>
+    </carousel>`
 })
