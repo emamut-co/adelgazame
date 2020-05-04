@@ -1,4 +1,4 @@
-<section class="calculator-section wave-white-bottom py-5">
+<section class="calculator-section wave wave-white-bottom py-5">
   <div class="container">
     <div class="row py-5 my-5">
       <div class="col-md-8">

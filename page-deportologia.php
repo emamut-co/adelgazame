@@ -7,10 +7,10 @@
           <li>Nos adaptamos a tus horarios</li>
           <li>Mejora tu calidad de vida</li>
         </ul>'); ?>
-  <section class="wave-white-bottom">
+  <section class="wave wave-white-bottom">
     <?php get_template_part('template-parts/main-section'); ?>
   </section>
-  <section class="wave-white py-5">
+  <section class="wave wave-white py-5">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -19,7 +19,7 @@
       </div>
     </div>
   </section>
-  <section class="py-5 dark wave-dark">
+  <section class="py-5 dark wave wave-dark">
     <div class="row pt-5">
       <div class="col">
         <h2 class="text-center text-rose subtitle">Beneficios <br>
@@ -72,7 +72,7 @@
     </div>
   </section>
   <?php get_template_part('template-parts/calculator-section') ?>
-  <section class="py-5 wave-white">
+  <section class="py-5 wave wave-white">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -86,7 +86,7 @@
       </div>
     </div>
   </section>
-  <section class="dark wave-dark py-5">
+  <section class="dark wave wave-dark py-5">
     <div class="container">
       <div class="row justify-content-center mt-expand">
         <div class="col-md-5">

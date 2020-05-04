@@ -34,7 +34,7 @@ function add_theme_scripts() {
   wp_enqueue_script('bootstrap-vue', '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js', array (), 1.1, true);
   wp_enqueue_script('vue-carousel', '//ssense.github.io/vue-carousel/js/vue-carousel.min.js', array (), 1.1, true);
 
-  if ( is_front_page() ) {
+  if ( is_front_page() || is_page('contacto') ) {
     wp_enqueue_style('leaflet', '//unpkg.com/leaflet@1.6.0/dist/leaflet.css', array(), '1.1', 'all');
     wp_enqueue_script('leaflet', '//unpkg.com/leaflet@1.6.0/dist/leaflet.js', array (), 1.1, true);
     wp_enqueue_script('leaflet-provider', '//cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.9.1/leaflet-providers.min.js', array (), 1.1, true);

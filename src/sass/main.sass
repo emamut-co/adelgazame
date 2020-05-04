@@ -38,7 +38,7 @@ body
         width: 1rem
         margin-left: -1rem
 
-.wave-blue, .wave-white, .wave-dark, .wave-white-bottom
+.wave
   position: relative
 
 .wave-carousel
@@ -59,11 +59,18 @@ body
     background: url(./img/waves/tran-dark.png)
     bottom: -1.5rem
 
+.wave-white-bottom
+  &::after
+    @extend %wave
+    background: url(./img/waves/tran-whi.png)
+    z-index: auto
+    bottom: .5rem
+
 .wave-dark-bottom
   &::after
     @extend %wave
     background: url(./img/waves/tran-dark.png)
-    bottom: 1rem
+    bottom: 0
 
 .wave-dark
   &::after
@@ -71,12 +78,14 @@ body
     background: url(./img/waves/dark-tran.png)
     bottom: -3.5rem
 
-.wave-white-bottom
+.wave-contact-section
+  padding-bottom: 5rem
+  padding-top: 6rem
   &::after
     @extend %wave
-    background: url(./img/waves/tran-whi.png)
-    z-index: auto
-    bottom: .5rem
+    background: url(./img/bg-contact.png)
+    height: 20rem
+    bottom: -15.5rem
 
 .btn
   border-radius: .65rem
@@ -166,7 +175,7 @@ section
       font-size: 3rem
       color: #000
       .caveat
-        font-size: 3.5rem
+        font-size: 4.3rem
         font-weight: normal
     @extend %list
 

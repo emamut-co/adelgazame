@@ -7,10 +7,10 @@
           <li>Permite bajar de peso rápido y de forma segura</li>
           <li>En apenas 6 meses, puedes llegar a perder hasta 20 kg</li>
         </ul>'); ?>
-  <section class="wave-dark-bottom">
+  <section class="wave wave-dark-bottom">
     <?php get_template_part('template-parts/main-section'); ?>
   </section>
-  <section class="py-5 dark wave-dark">
+  <section class="py-5 dark wave wave-dark">
     <div class="row pt-5">
       <div class="col">
         <h2 class="text-center text-rose subtitle">Beneficios y características <br>
@@ -53,7 +53,7 @@
     </div>
   </section>
   <?php get_template_part('template-parts/calculator-section') ?>
-  <section class="py-5 wave-white">
+  <section class="py-5 wave wave-white">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -76,7 +76,7 @@
       </div>
     </div>
   </section>
-  <section class="dark py-5 wave-dark" id="schedule-form">
+  <section class="dark py-5 wave wave-dark" id="schedule-form">
     <div class="container">
       <div class="row justify-content-center mt-expand">
         <div class="col-md-8">

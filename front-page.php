@@ -23,11 +23,11 @@
     <div class="row">
       <div class="col">
         <h2 class="text-center subtitle">Mapa</h2>
-        <div id="map" class="mt-5 wave-white"></div>
+        <div id="map" class="mt-5 wave wave-white"></div>
       </div>
     </div>
   </section>
-  <section class="py-5 dark wave-dark">
+  <section class="py-5 dark wave wave-dark">
     <div class="container">
       <div class="row">
         <div class="col">
