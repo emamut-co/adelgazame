@@ -78,14 +78,20 @@ body
     background: url(./img/waves/dark-tran.png)
     bottom: -3.5rem
 
-.wave-contact-section
-  padding-bottom: 5rem
-  padding-top: 6rem
+.wave-gray
   &::after
     @extend %wave
-    background: url(./img/bg-contact.png)
-    height: 20rem
-    bottom: -15.5rem
+    background: url(./img/waves/tran-gray@2x.png)
+    bottom: -.1rem
+
+.wave-contact-section
+  padding-top: 12rem
+  padding-bottom: 6rem
+  &::after
+    @extend %wave
+    background: url(./img/bg-contact@2x.png)
+    height: 25rem
+    bottom: -19rem
 
 .btn
   border-radius: .65rem
