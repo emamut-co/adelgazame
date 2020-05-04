@@ -2,7 +2,7 @@
 
 <section class="wave wave-gray pb-5">
   <div class="container">
-    <div class="row mt-expand pt-5">
+    <div class="row mt-expand py-5">
       <div class="col-md-8">
         <?php if (have_posts()) :
           while (have_posts()) : the_post(); ?>
