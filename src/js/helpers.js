@@ -1,37 +1,5 @@
 jQuery(document).ready(function ($) {
-  window.onscroll = function () { scrollFunction() };
-
-  function scrollFunction() {
-    var transition = 'width 200ms ease-in-out, height 200ms ease-in-out'
-
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      $("#logo").css({
-        'width': '70%',
-        'transition': transition
-      })
-      $("#navbar-main").css({
-        'height': '6rem',
-        'transition': transition
-      })
-      $('#schedule-button').css({
-        'top': '6.5rem',
-        'transition': 'top 200ms ease-in-out'
-      })
-    } else {
-      $("#logo").css({
-        'width': '100%',
-        'transition': transition
-      })
-      $("#navbar-main").css({
-        'height': '10rem',
-        'transition': transition
-      })
-      $('#schedule-button').css({
-        'top': '10.5rem',
-        'transition': 'top 200ms ease-in-out'
-      })
-    }
-  }
+  window.onscroll = function () { scrollFunction() }
 
   $('#navbar-main').find('.collapse.navbar-collapse').append(`
     <form action="${siteURL}" method="get" id="search-form">
@@ -62,24 +30,62 @@ jQuery(document).ready(function ($) {
 
   $('#searchform').find('input[type="text"]').attr('placeholder', 'Deseo leer sobre…')
 
-  // Calculator section
-  let height = 0,
-    weight = 0
-
+  // Start Calculator section
+  let imcMessages = [
+    {
+      'text': 'Desnutrición moderada',
+      'message': 'Tranquilo nuestro equipo de expertos están listos para guiarte',
+      'className': 'low'
+    },
+    {
+      'text': 'Peso normal',
+      'message': 'Felicidades sabes como mantener tu peso ideal. <br> ¿Deseas llevar tu cuerpo al siguiente nivel?',
+      'className': ''
+    },
+    {
+      'text': 'Obesidad grado 1',
+      'message': 'Tranquilo nuestro equipo de expertos están listos para guiarte',
+      'className': 'high'
+    },
+    {
+      'text': 'Obesidad grado 2',
+      'message': 'Tranquilo nuestro equipo de expertos están listos para guiarte',
+      'className': 'high'
+    }
+  ]
   $('#calculator-modal').modal('show')
-  $('#part-1').addClass('active')
 
   $('#next-calculator').on('click', function (e) {
     e.preventDefault()
 
     if ($('#part-1').hasClass('active')) {
-      let data = $('#calculator-form').serializeArray(),
-        message = `<strong>Objetivo:</strong>${data[2].value}<br>
+      let data = $('#calculator-form').serializeArray()
+      console.log("window.onscroll -> data", data)
+
+      if (data[0].value == '' || data[1].value == '' || data[3].value == '' || data[4].value == '') {
+        $('#calculator-form').find('.alert').removeClass('d-none')
+        return null
+      }
+
+      let message = `<strong>Objetivo:</strong>${data[2].value}<br>
           <strong>Altura:</strong>${data[3].value}<br>
-          <strong>Peso:</strong>${data[4].value}<br>
-        `
-      height = data[3].value
-      weight = data[4].value
+          <strong>Peso:</strong>${data[4].value}<br>`,
+        imc = parseFloat(data[4].value) / (parseFloat(data[3].value / 100) * parseFloat(data[3].value / 100)),
+        cont
+
+      if(imc < 18.5)
+        cont = 0
+      if(imc >= 18.5 && imc < 25)
+        cont = 1
+      if(imc >= 25 && imc < 30)
+        cont = 2
+      if(imc >= 30)
+        cont = 3
+
+      $('#calculator-imc-value').html(imc.toFixed(0) + '<br> <small>' + imcMessages[cont].text + '</small>')
+      $('#calculator-imc-value').addClass(imcMessages[cont].className)
+
+      $('#calculator-imc-message').html(imcMessages[cont].message)
 
       data.push({name: 'your-subject', value: 'Contacto desde Calculadora'})
       data.push({name: 'your-message', value: message})
@@ -96,12 +102,17 @@ jQuery(document).ready(function ($) {
 
       return null
     }
+
     if($('#part-2').hasClass('active')) {
       $('#calculator-genre').addClass('d-none')
       $('#calculator-result').removeClass('d-none')
 
       $('#part-2').removeClass('active')
       $('#part-3').addClass('active')
+
+      $('#next-calculator').addClass('d-none')
+      $('#send-result').removeClass('d-none')
+      $('#send-result').addClass('d-block')
 
       return null
     }
@@ -119,6 +130,14 @@ jQuery(document).ready(function ($) {
       $('#img-genre-female').removeClass('d-none')
     }
   })
+
+  $('#send-result').on('click', function () {
+    $('#calculator-result').find('.alert').removeClass('d-none')
+    setTimeout(function () {
+      $("#calculator-modal").modal('hide');
+    }, 3000);
+  })
+  // End Calculator section
 
   $('.VueCarousel-navigation-prev, .VueCarousel-navigation-next').css('padding', '6rem')
   $('.VueCarousel-navigation-prev').html(`<img src="${themePath}/img/angle-left-gray.png" alt="" class="img-fluid"/>`)
@@ -164,5 +183,37 @@ jQuery(document).ready(function ($) {
   function toggleClass() {
     $('#search-form').toggleClass('show')
     $('#search-button').toggleClass('d-none')
+  }
+
+  function scrollFunction() {
+    var transition = 'width 200ms ease-in-out, height 200ms ease-in-out'
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      $("#logo").css({
+        'width': '70%',
+        'transition': transition
+      })
+      $("#navbar-main").css({
+        'height': '6rem',
+        'transition': transition
+      })
+      $('#schedule-button').css({
+        'top': '6.5rem',
+        'transition': 'top 200ms ease-in-out'
+      })
+    } else {
+      $("#logo").css({
+        'width': '100%',
+        'transition': transition
+      })
+      $("#navbar-main").css({
+        'height': '10rem',
+        'transition': transition
+      })
+      $('#schedule-button').css({
+        'top': '10.5rem',
+        'transition': 'top 200ms ease-in-out'
+      })
+    }
   }
 })

@@ -66,7 +66,7 @@
         </h2>
         <div class="modal-content border border-secondary contact-form-container p-4">
           <div class="modal-header border-bottom-0">
-              <div class="header-indicator text-primary" id="part-1">
+              <div class="header-indicator text-primary active" id="part-1">
                 <div class="rounded-circle text-center numeral">1</div> <span>Llena tus datos</span>
               </div>
               <div class="header-indicator text-primary" id="part-2">
@@ -82,11 +82,14 @@
           </div>
           <div class="modal-body">
             <form id="calculator-form">
-              <input type="text" class="form-control w-75 text-center mx-auto mb-3" name="your-name" placeholder="Nombre y apellido" value="Andrés">
-              <input type="email" class="form-control w-75 text-center mx-auto mb-3" name="your-email" placeholder="Email" value="email@gmail.com">
+              <div class="alert alert-warning d-none" role="alert">
+                <i class="fas fa-exclamation-circle"></i> Diligencie completamente el formulario
+              </div>
+              <input type="text" class="form-control w-75 text-center mx-auto mb-3" name="your-name" placeholder="Nombre y apellido">
+              <input type="email" class="form-control w-75 text-center mx-auto mb-3" name="your-email" placeholder="Email">
               <select class="form-control text-center w-75 mx-auto mb-3" name="objective">
                 <option value="">Define tu objetivo</option>
-                <option value="Bajar de peso" selected>Bajar de peso</option>
+                <option value="Bajar de peso">Bajar de peso</option>
                 <option value="Subir masa corporal">Subir masa corporal</option>
                 <option value="Mejorar condición y rendimiento">Mejorar condición y rendimiento</option>
                 <option value="Fitness">Fitness</option>
@@ -96,14 +99,14 @@
               <div class="form-group row w-75 mx-auto">
                 <label for="height" class="col-sm-3 col-form-label text-primary"><strong>Altura</strong></label>
                 <div class="col-sm-6">
-                  <input type="text" name="height" class="form-control" value="106">
+                  <input type="number" name="height" class="form-control">
                 </div>
                 <span class="col-sm-3 col-form-label text-white">cm</span>
               </div>
               <div class="form-group row w-75 mx-auto">
                 <label for="weight" class="col-sm-3 col-form-label text-primary"><strong>Peso</strong></label>
                 <div class="col-sm-6">
-                  <input type="text" name="weight" class="form-control" value="179">
+                  <input type="number" name="weight" class="form-control">
                 </div>
                 <span class="col-sm-3 col-form-label text-white">kg</span>
               </div>
@@ -135,7 +138,20 @@
                 <input class="form-check-input" type="radio" name="shape-selector" value="4">
               </div>
             </div>
-            <div class="mt-5 text-center text-primary" id="next-calculator"><i class="fas fa-chevron-right"></i></div>
+            <div id="calculator-result" class="w-75 mx-auto text-center d-none">
+              <div class="alert alert-success d-none" role="alert">
+                <i class="fas fa-check-circle"></i> Correo enviado exitosamente
+              </div>
+              <p class="text-white mb-5">Tu índice de masa corporal es:</p>
+              <p id="calculator-imc-value"></p>
+              <p id="calculator-imc-message"></p>
+            </div>
+            <div class="mt-5 text-center text-primary" id="next-calculator">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <button class="btn btn-secondary py-2 px-3 mx-auto d-none" id="send-result">
+              <img src="<?php echo get_template_directory_uri() ?>/img/schedule-icon.png" alt="" class="img-fluid"> <strong class="ml-2"> Agenda tu cita</strong>
+            </button>
           </div>
         </div>
       </div>
