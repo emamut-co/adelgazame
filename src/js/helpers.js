@@ -33,7 +33,6 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  // $('#schedule-modal').modal('show')
   $('#navbar-main').find('.collapse.navbar-collapse').append(`
     <form action="${siteURL}" method="get" id="search-form">
       <div class="input-group mb-3">
@@ -62,6 +61,10 @@ jQuery(document).ready(function ($) {
   })
 
   $('#searchform').find('input[type="text"]').attr('placeholder', 'Deseo leer sobre…')
+
+  // Calculator section
+  $('#calculator-modal').modal('show')
+  $('#part-2, #part-3').addClass('hide')
 
   $('.VueCarousel-navigation-prev, .VueCarousel-navigation-next').css('padding', '6rem')
   $('.VueCarousel-navigation-prev').html(`<img src="${themePath}/img/angle-left-gray.png" alt="" class="img-fluid"/>`)

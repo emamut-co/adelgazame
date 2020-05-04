@@ -326,13 +326,28 @@ div.wpcf7-validation-errors
   img
     width: 1.25rem
 
-#schedule-modal
+.modal
   background: rgba(29, 25, 52, .85)
   .modal-content
     background: transparent
   .modal-dialog-centered
     flex-direction: column
     align-content: flex-start
+
+#calculator-modal
+  .header-indicator
+    display: inline-block
+    margin-left: .5rem
+    .numeral
+      display: inline-block
+      width: 2rem
+      border: 1.5px solid $rose
+    &.hide
+      .numeral
+        border: 1.5px solid #FFF
+        color: #FFF
+      span
+        display: none
 
 #map
   height: 70vh

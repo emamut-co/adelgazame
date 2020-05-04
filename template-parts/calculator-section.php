@@ -19,7 +19,7 @@
         <p class="text-white">Se utiliza para estimar la cantidad de grasa corporal que tiene una
         persona, y determinar por tanto si el peso está dentro del rango normal, o por el
         contrario, se tiene sobrepeso o delgadez.</p>
-        <button class="btn btn-secondary mt-3">Conoce tu IMC</button>
+        <button class="btn btn-secondary mt-3" data-toggle="modal" data-target="#calculator-modal">Conoce tu IMC</button>
       </div>
     </div>
   </div>
