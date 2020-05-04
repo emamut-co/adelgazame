@@ -1,41 +1,37 @@
-<?php
-/**
- * The template for displaying Search Results pages.
- *
- * @package Shape
- * @since Shape 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<section class="wave wave-gray pb-5">
+  <div class="container">
+    <div class="row mt-expand py-5">
+      <div class="col-md-8">
+        <?php if (have_posts()) : ?>
+          <h3 class="mb-5"><?php printf( __( 'Resultados de la búsqueda de: "%s"', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
+          <?php while (have_posts()) : the_post(); ?>
+            <?php if ( has_post_thumbnail() ): ?>
+              <div class="wave wave-white wave-white-bottom">
+                <?php the_post_thumbnail('large', array('class' => 'img-fluid')) ?>
+              </div>
+            <?php endif ?>
+            <small class="text-muted">
+              Por <?php the_author() ?> | <?php echo date_i18n('F j, Y') ?> | en <?php the_category(', ') ?> | <i class="far fa-comment"></i> <?php comments_popup_link('0 Comentarios', '1 Comentario', '% Comentarios'); ?>
+            </small>
+            <h5><strong><?php the_title(); ?></strong></h5>
+            <div class="entry blog mb-5">
+              <?php the_excerpt(); ?>
+              <a href="<?php echo get_post_permalink() ?>" class="btn btn-secondary">Leer más</a>
+            </div>
+          <?php endwhile; ?>
+        <?php else: ?>
+          <h3 class="mb-5"><?php printf( __( 'No hay resultados para: "%s"', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
+        <?php endif; ?>
+      </div>
+      <div class="col-md-4">
+        <?php if ( is_active_sidebar( 'custom-side-bar' ) ) : ?>
+          <?php dynamic_sidebar( 'custom-side-bar' ); ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="primary" class="content-area">
-            <div id="content" class="site-content" role="main">
-
-            <?php if ( have_posts() ) : ?>
-
-                <header class="page-header">
-                    <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-                </header><!-- .page-header -->
-
-                <?php shape_content_nav( 'nav-above' ); ?>
-
-                <?php /* Start the Loop */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-
-                    <?php get_template_part( 'content', 'search' ); ?>
-
-                <?php endwhile; ?>
-
-                <?php shape_content_nav( 'nav-below' ); ?>
-
-            <?php else : ?>
-
-                <?php get_template_part( 'no-results', 'search' ); ?>
-
-            <?php endif; ?>
-
-            </div><!-- #content .site-content -->
-        </section><!-- #primary .content-area -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
