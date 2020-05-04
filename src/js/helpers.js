@@ -63,8 +63,36 @@ jQuery(document).ready(function ($) {
   $('#searchform').find('input[type="text"]').attr('placeholder', 'Deseo leer sobre…')
 
   // Calculator section
+  let height = 0,
+    weight = 0
+
   $('#calculator-modal').modal('show')
-  $('#part-2, #part-3').addClass('hide')
+  $('#part-1').addClass('active')
+
+  $('#next-calculator').on('click', function (e) {
+    e.preventDefault()
+
+    if ($('#part-1').hasClass('active')) {
+      let data = $('#calculator-form').serializeArray(),
+        message = `<strong>Objetivo:</strong>${data[2].value}<br>
+          <strong>Altura:</strong>${data[3].value}<br>
+          <strong>Peso:</strong>${data[4].value}<br>
+        `
+      height = data[3].value
+      weight = data[4].value
+
+      data.push({name: 'your-subject', value: 'Contacto desde Calculadora'})
+      data.push({name: 'your-message', value: message})
+
+      $.post(siteURL + '/wp-json/contact-form-7/v1/contact-forms/148/feedback', data, function (response) {
+        console.log(response.status)
+      })
+
+      $('#calculator-form').addClass('d-none')
+      $('#part-1').removeClass('active')
+      $('#part-2').addClass('active')
+    }
+  })
 
   $('.VueCarousel-navigation-prev, .VueCarousel-navigation-next').css('padding', '6rem')
   $('.VueCarousel-navigation-prev').html(`<img src="${themePath}/img/angle-left-gray.png" alt="" class="img-fluid"/>`)

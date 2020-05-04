@@ -338,16 +338,23 @@ div.wpcf7-validation-errors
   .header-indicator
     display: inline-block
     margin-left: .5rem
+    font-weight: bold
     .numeral
-      display: inline-block
+      color: #FFF
+      border: 1.5px solid #FFF
       width: 2rem
-      border: 1.5px solid $rose
-    &.hide
+    span
+      display: none
+    &.active
       .numeral
-        border: 1.5px solid #FFF
-        color: #FFF
+        color: $rose
+        display: inline-block
+        border: 1.5px solid $rose
       span
-        display: none
+        display: inline-block
+
+  #next-calculator
+    cursor: pointer
 
 #map
   height: 70vh

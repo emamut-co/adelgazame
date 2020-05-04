@@ -64,7 +64,7 @@
           <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
           Calculadora de <strong>IMC</strong>
         </h2>
-        <div class="modal-content border border-secondary contact-form-container px-4">
+        <div class="modal-content border border-secondary contact-form-container p-4">
           <div class="modal-header border-bottom-0">
               <div class="header-indicator text-primary" id="part-1">
                 <div class="rounded-circle text-center numeral">1</div> <span>Llena tus datos</span>
@@ -81,7 +81,34 @@
             </button>
           </div>
           <div class="modal-body">
-
+            <form id="calculator-form">
+              <input type="text" class="form-control w-75 text-center mx-auto mb-3" name="your-name" placeholder="Nombre y apellido" value="Andrés">
+              <input type="email" class="form-control w-75 text-center mx-auto mb-3" name="your-email" placeholder="Email" value="email@gmail.com">
+              <select class="form-control text-center w-75 mx-auto mb-3" name="objective">
+                <option value="">Define tu objetivo</option>
+                <option value="Bajar de peso" selected>Bajar de peso</option>
+                <option value="Subir masa corporal">Subir masa corporal</option>
+                <option value="Mejorar condición y rendimiento">Mejorar condición y rendimiento</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Actividad física por prescripción médica">Actividad física por prescripción médica</option>
+                <option value="No sé">No sé</option>
+              </select>
+              <div class="form-group row w-75 mx-auto">
+                <label for="height" class="col-sm-3 col-form-label text-primary"><strong>Altura</strong></label>
+                <div class="col-sm-6">
+                  <input type="text" name="height" class="form-control" value="106">
+                </div>
+                <span class="col-sm-3 col-form-label text-white">cm</span>
+              </div>
+              <div class="form-group row w-75 mx-auto">
+                <label for="weight" class="col-sm-3 col-form-label text-primary"><strong>Peso</strong></label>
+                <div class="col-sm-6">
+                  <input type="text" name="weight" class="form-control" value="179">
+                </div>
+                <span class="col-sm-3 col-form-label text-white">kg</span>
+              </div>
+            </form>
+            <div class="mt-5 text-center text-primary" id="next-calculator"><i class="fas fa-chevron-right"></i></div>
           </div>
         </div>
       </div>
