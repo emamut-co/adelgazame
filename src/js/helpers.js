@@ -1,5 +1,6 @@
 jQuery(document).ready(function ($) {
-  window.onscroll = function () { scrollFunction() }
+  if (window.width > 768)
+    window.onscroll = function () { scrollFunction() }
 
   $('#navbar-main').find('.collapse.navbar-collapse').append(`
     <form action="${siteURL}" method="get" id="search-form">
@@ -89,7 +90,7 @@ jQuery(document).ready(function ($) {
       data.push({name: 'your-subject', value: 'Contacto desde Calculadora'})
       data.push({name: 'your-message', value: message})
 
-      $.post(siteURL + '/wp-json/contact-form-7/v1/contact-forms/148/feedback', data, function (response) {
+      $.post(siteURL + '/wp-json/contact-form-7/v1/contact-forms/133/feedback', data, function (response) {
         console.log(response.status)
       })
 
@@ -138,7 +139,9 @@ jQuery(document).ready(function ($) {
   })
   // End Calculator section
 
-  $('.VueCarousel-navigation-prev, .VueCarousel-navigation-next').css('padding', '6rem')
+  // if (window.width > 768)
+    // $('.VueCarousel-navigation-prev, .VueCarousel-navigation-next').css('padding', '6rem')
+
   $('.VueCarousel-navigation-prev').html(`<img src="${themePath}/img/angle-left-gray.png" alt="" class="img-fluid"/>`)
   $('.VueCarousel-navigation-next').html(`<img src="${themePath}/img/angle-right-gray.png" alt="" class="img-fluid"/>`)
 
