@@ -20,6 +20,11 @@ function my_theme_register_required_plugins()
       'name'      => 'WP-Live Chat by 3CX',
       'slug'      => 'wp-live-chat-support',
       'required'  => true
+    ),
+    array(
+      'name'      => 'WordPress Popular Posts',
+      'slug'      => 'wordpress-popular-posts',
+      'required'  => true
     )
   );
 

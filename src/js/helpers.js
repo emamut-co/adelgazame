@@ -61,6 +61,8 @@ jQuery(document).ready(function ($) {
     }
   })
 
+  $('#searchform').find('input[type="text"]').attr('placeholder', 'Deseo leer sobre…')
+
   $('.VueCarousel-navigation-prev, .VueCarousel-navigation-next').css('padding', '6rem')
   $('.VueCarousel-navigation-prev').html(`<img src="${themePath}/img/angle-left-gray.png" alt="" class="img-fluid"/>`)
   $('.VueCarousel-navigation-next').html(`<img src="${themePath}/img/angle-right-gray.png" alt="" class="img-fluid"/>`)

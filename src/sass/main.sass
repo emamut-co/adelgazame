@@ -368,6 +368,43 @@ div.wpcf7-validation-errors
   .btn
     font-size: .85rem
 
+.widget-content
+  @extend %list
+  ul
+    margin-left: 0
+    li
+      a
+        color: $gray
+      &::before
+        content: ''
+      &::after
+        font-family: "Font Awesome 5 Free"
+        font-weight: 900
+        content: '\f054'
+        color: $gray
+        position: absolute
+        right: 5rem
+  #searchform
+    .screen-reader-text,
+    #searchsubmit
+      display: none
+    input
+      border: 1px solid $blue
+      border-radius: 2rem
+      width: 80%
+      padding-left: 1rem
+      font-size: .8rem
+      &::placeholder
+        padding-left: 1rem
+        font-size: .8rem
+        color: $gray
+  .widget-title
+    color: $blue
+    font-weight: bold
+    font-size: 1rem
+    text-transform: uppercase
+    margin-top: 3rem
+
 footer
   background-color: #4A475C
   p
