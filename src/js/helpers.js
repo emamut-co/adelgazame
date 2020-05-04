@@ -89,8 +89,34 @@ jQuery(document).ready(function ($) {
       })
 
       $('#calculator-form').addClass('d-none')
+      $('#calculator-genre').removeClass('d-none')
+
       $('#part-1').removeClass('active')
       $('#part-2').addClass('active')
+
+      return null
+    }
+    if($('#part-2').hasClass('active')) {
+      $('#calculator-genre').addClass('d-none')
+      $('#calculator-result').removeClass('d-none')
+
+      $('#part-2').removeClass('active')
+      $('#part-3').addClass('active')
+
+      return null
+    }
+  })
+
+  $('input[name="genre-selector"]').on('click', function (e) {
+    let data = $(this).val()
+    if(data == 'male') {
+      $('#img-genre-male').removeClass('d-none')
+      $('#img-genre-female').addClass('d-none')
+    }
+
+    if(data == 'female') {
+      $('#img-genre-male').addClass('d-none')
+      $('#img-genre-female').removeClass('d-none')
     }
   })
 

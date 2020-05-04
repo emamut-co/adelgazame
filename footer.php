@@ -108,6 +108,33 @@
                 <span class="col-sm-3 col-form-label text-white">kg</span>
               </div>
             </form>
+            <div id="calculator-genre" class="w-75 mx-auto d-none">
+              <strong class="text-primary mr-3">Género</strong>
+              <div class="form-check form-check-inline text-white">
+                <input class="form-check-input" type="radio" name="genre-selector" id="genre-selector-male" value="male">
+                <label class="form-check-label" for="genre-selector-male">masculino</label>
+              </div>
+              <div class="form-check form-check-inline text-white">
+                <input class="form-check-input" type="radio" name="genre-selector" id="genre-selector-female" value="female" checked>
+                <label class="form-check-label" for="genre-selector-female">femenino</label>
+              </div>
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/selector-female.png" class="img-fluid mt-4" id="img-genre-female" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/img/selector-male.png" class="img-fluid mt-4 d-none" id="img-genre-male" alt="">
+
+              <div class="form-check form-check-inline shape-selector mt-4">
+                <input class="form-check-input" type="radio" name="shape-selector" value="1">
+              </div>
+              <div class="form-check form-check-inline shape-selector">
+                <input class="form-check-input" type="radio" name="shape-selector" value="2">
+              </div>
+              <div class="form-check form-check-inline shape-selector">
+                <input class="form-check-input" type="radio" name="shape-selector" value="3">
+              </div>
+              <div class="form-check form-check-inline shape-selector">
+                <input class="form-check-input" type="radio" name="shape-selector" value="4">
+              </div>
+            </div>
             <div class="mt-5 text-center text-primary" id="next-calculator"><i class="fas fa-chevron-right"></i></div>
           </div>
         </div>
