@@ -10,10 +10,9 @@
               <?php the_post_thumbnail('large', array('class' => 'img-fluid')) ?>
             </div>
             <small class="text-muted">Por <?php the_author() ?> | <?php the_time('F jS, Y') ?> | en <?php the_category(', ') ?> | <i class="far fa-comment"></i> <?php comments_popup_link('0 Comentarios', '1 Comentario', '% Comentarios'); ?></small>
-            <h5><strong><?php the_title(); ?></strong></h5>
-            <div class="entry mb-5">
-              <?php the_excerpt(); ?>
-              <a href="<?php echo get_post_permalink() ?>" class="btn btn-secondary">Leer más</a>
+            <h3><strong><?php the_title(); ?></strong></h3>
+            <div class="entry mt-4">
+              <?php the_content(); ?>
             </div>
           <?php endwhile; ?>
         <?php endif; ?>
