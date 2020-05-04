@@ -53,7 +53,6 @@ jQuery(document).ready(function ($) {
       'className': 'high'
     }
   ]
-  $('#calculator-modal').modal('show')
 
   $('#next-calculator').on('click', function (e) {
     e.preventDefault()
@@ -135,7 +134,7 @@ jQuery(document).ready(function ($) {
     $('#calculator-result').find('.alert').removeClass('d-none')
     setTimeout(function () {
       $("#calculator-modal").modal('hide');
-    }, 3000);
+    }, 2000);
   })
   // End Calculator section
 
