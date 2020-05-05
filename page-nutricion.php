@@ -10,7 +10,7 @@
   <section class="wave wave-white-bottom">
     <?php get_template_part('template-parts/main-section'); ?>
   </section>
-  <section class="wave wave-white py-5">
+  <section class="wave wave-dark-bottom py-5">
     <div class="container">
       <div class="row">
         <div class="col">

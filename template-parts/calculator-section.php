@@ -1,19 +1,17 @@
 <section class="calculator-section wave wave-white-bottom py-5">
   <div class="container">
     <div class="row py-5 my-5">
-      <div class="col-md-8">
-        <div class="media">
-          <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
-          <div class="media-body">
-            <h5 class="mt-0 text-white">
-              Calculadora de <br>
-              <strong>
-                Índice de Masa Corporal <br>
-                (IMC)
-              </strong>
-            </h5>
-          </div>
-        </div>
+      <div class="col-md-1">
+        <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
+      </div>
+      <div class="col-md-7">
+        <h5 class="mt-0 text-white">
+          Calculadora de <br>
+          <strong>
+            Índice de Masa Corporal <br>
+            (IMC)
+          </strong>
+        </h5>
       </div>
       <div class="col-md">
         <p class="text-white">Se utiliza para estimar la cantidad de grasa corporal que tiene una
