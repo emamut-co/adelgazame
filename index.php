@@ -6,7 +6,7 @@
       </div>
     </div>
   </section>
-  <section class="container pt-5">
+  <section class="container wave wave-white pt-5">
     <div class="row mt-5">
       <div class="col">
         <h2 class="text-center subtitle">¿Quiénes somos?</h2>

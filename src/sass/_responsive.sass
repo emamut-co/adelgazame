@@ -58,15 +58,36 @@
       background: url(./img/waves/mobile/tran-dark.png)
       bottom: -1rem
 
+  .wave-carousel
+    &::after
+      background: url(./img/waves/mobile/carousel-blue.png)
+      height: 76%
+      bottom: -4rem
+
   #search-form, #search-button
     display: none
 
+  #scroll-down
+    bottom: -3.5rem
+
   #main-carousel
+    padding-bottom: 21rem
+    .carousel-inner
+      overflow: visible
     .carousel-caption
-      left: 10%
+      top: 15rem !important
+      left: 1rem
+      z-index: 4000
+      width: 90%
+      h5, p
+        color: #FFF
+      h5.title
+        font-size: 2.5rem
+        font-weight: normal
     .carousel-control-prev,
     .carousel-control-next
       margin-left: 0
+      bottom: -3rem
 
   .main-section
     .side-container
