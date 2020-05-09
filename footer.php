@@ -91,7 +91,7 @@
       <div class="modal-dialog" role="document">
         <h2 class="text-white text-center mb-5">
           <img src="<?php echo get_template_directory_uri() ?>/img/bascula.png" alt="" class="mr-3">
-          Calculadora de <strong>IMC</strong>
+          Calculadora <br class="d-block d-md-none"> de <strong>IMC</strong>
         </h2>
         <div class="modal-content border border-secondary contact-form-container p-4">
           <div class="modal-header border-bottom-0">
@@ -125,22 +125,22 @@
                 <option value="Actividad física por prescripción médica">Actividad física por prescripción médica</option>
                 <option value="No sé">No sé</option>
               </select>
-              <div class="form-group row w-75 mx-auto">
-                <label for="height" class="col-sm-3 col-form-label text-primary"><strong>Altura</strong></label>
-                <div class="col-sm-6">
+              <div class="form-group row w-100 w-md-75 mx-auto">
+                <label for="height" class="col-3 col-form-label text-primary"><strong>Altura</strong></label>
+                <div class="col-6">
                   <input type="number" name="height" class="form-control">
                 </div>
-                <span class="col-sm-3 col-form-label text-white">cm</span>
+                <span class="col-3 col-form-label text-white">cm</span>
               </div>
-              <div class="form-group row w-75 mx-auto">
-                <label for="weight" class="col-sm-3 col-form-label text-primary"><strong>Peso</strong></label>
-                <div class="col-sm-6">
+              <div class="form-group row w-100 w-md-75 mx-auto">
+                <label for="weight" class="col-3 col-form-label text-primary"><strong>Peso</strong></label>
+                <div class="col-6">
                   <input type="number" name="weight" class="form-control">
                 </div>
-                <span class="col-sm-3 col-form-label text-white">kg</span>
+                <span class="col-3 col-form-label text-white">kg</span>
               </div>
             </form>
-            <div id="calculator-genre" class="w-75 mx-auto d-none">
+            <div id="calculator-genre" class="w-100 w-md-75 mx-auto d-none">
               <strong class="text-primary mr-3">Género</strong>
               <div class="form-check form-check-inline text-white">
                 <input class="form-check-input" type="radio" name="genre-selector" id="genre-selector-male" value="male">
@@ -167,7 +167,7 @@
                 <input class="form-check-input" type="radio" name="shape-selector" value="4">
               </div>
             </div>
-            <div id="calculator-result" class="w-75 mx-auto text-center d-none">
+            <div id="calculator-result" class="w-100 w-md-75 mx-auto text-center d-none">
               <div class="alert alert-success d-none" role="alert">
                 <i class="fas fa-check-circle"></i> Correo enviado exitosamente
               </div>
