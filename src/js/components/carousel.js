@@ -38,7 +38,8 @@ Vue.component('customCarousel', {
           <div class="carousel-caption px-4">
             <h5 class="title">{{ slide.post_title }}</h5>
             <div v-html="slide.custom_fields.slide_text[0]"></div>
-            <a :href="slide.custom_fields.slide_button_url[0]" class="btn btn-secondary mt-45">{{ slide.custom_fields.slide_button_text[0] }}</a>
+            <a :href="slide.custom_fields.slide_button_url[0]" class="btn btn-secondary d-none d-md-block mt-4">{{ slide.custom_fields.slide_button_text[0] }}</a>
+            <a :href="slide.custom_fields.slide_button_url[0]" class="btn btn-primary d-block d-md-none text-white mt-4">{{ slide.custom_fields.slide_button_text[0] }}</a>
           </div>
         </div>
       </div>
