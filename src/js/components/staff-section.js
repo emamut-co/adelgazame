@@ -31,13 +31,14 @@ Vue.component('staffSection', {
     }
   },
   template: `
-    <carousel :perPageCustom="[[480, 1], [768, 2]]"
+    <carousel
       :autoplay="true"
       :autoplay-timeout="4000"
       :loop="true"
       pagination-color="#707070"
       pagination-active-color="#2A7DE1"
-      :navigation-enabled="true">
+      :navigation-enabled="true"
+      :perPageCustom="[[360, 1], [768, 2]]">
       <slide class="p-2" v-for="(staff, key) in staffArray" :key="key">
         <b-card :title="staff.custom_fields.staff_treatment[0]"
           :sub-title="staff.post_title"

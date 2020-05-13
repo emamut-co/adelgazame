@@ -25,7 +25,7 @@ Vue.component('plansSection', {
     }
   },
   template: `
-    <carousel :perPageCustom="[[480, 1], [768, 2]]"
+    <carousel :perPageCustom="[[360, 1], [768, 2]]"
       :autoplay="true"
       :autoplay-timeout="4000"
       :loop="true"
