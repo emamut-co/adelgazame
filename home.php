@@ -10,7 +10,7 @@
           endwhile; ?>
         <?php endif; ?>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 pt-5 mt-5">
         <?php if ( is_active_sidebar( 'custom-side-bar' ) ) : ?>
           <?php dynamic_sidebar( 'custom-side-bar' ); ?>
         <?php endif; ?>
