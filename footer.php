@@ -176,7 +176,7 @@
               <p id="calculator-imc-message"></p>
             </div>
             <div class="mt-5 text-center text-primary" id="next-calculator">
-              <i class="fas fa-chevron-right"></i>
+              <img src="<?php echo get_template_directory_uri() ?>/img/btn-calculator.png" alt="" class="img-fluid">
             </div>
             <button class="btn btn-secondary py-2 px-3 mx-auto d-none" id="send-result">
               <img src="<?php echo get_template_directory_uri() ?>/img/schedule-icon.png" alt="" class="img-fluid"> <strong class="ml-2"> Agenda tu cita</strong>
