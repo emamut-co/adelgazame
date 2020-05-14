@@ -1,5 +1,5 @@
 Vue.component('plansSection', {
-  data: function () {
+  data() {
     return {
       plansArray: []
     }

@@ -1,5 +1,5 @@
 Vue.component('staffSection', {
-  data: function () {
+  data() {
     return {
       staffArray: []
     }
