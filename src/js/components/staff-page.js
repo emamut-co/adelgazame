@@ -11,7 +11,6 @@ Vue.component('staffPage', {
     axios.get(siteURL + '/wp-json/staff/v1/get?page=' + this.page)
       .then(function (response) {
         self.staff = response.data[0]
-        console.log("mounted -> self.staff", self.staff)
       })
   },
   template: `
