@@ -7,8 +7,10 @@
         <?php if (have_posts()) :
           while (have_posts()) : the_post();
             get_template_part('template-parts/blog-section');
-          endwhile; ?>
-        <?php endif; ?>
+          endwhile;
+
+          emamut_numeric_posts_nav();
+        endif; ?>
       </div>
       <div class="col-md-4 pt-5 mt-5">
         <?php if ( is_active_sidebar( 'custom-side-bar' ) ) : ?>
