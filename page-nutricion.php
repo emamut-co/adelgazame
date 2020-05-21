@@ -65,7 +65,7 @@
         <div class="col-md-8">
           <h2 class="text-center subtitle">Conoce los servicios que tenemos para ti</h2>
         </div>
-      </row>
+      </div>
       <div class="row justify-content-center mt-4 pb-5">
         <div class="col-md-8">
           <plans-section></plans-section>

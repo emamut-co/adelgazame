@@ -1,6 +1,6 @@
 <?php get_header();
   set_query_var('sideContent', '<h2 class="subtitle">
-          ¿List@ para llegar a tu <span class="caveat text-primary">peso ideal</span>
+          ¿List@ para llegar a tu <span class="caveat text-primary">peso ideal?</span>
         </h2>
         <ul class="mt-4">
           <li>Entrenamiento hecho a tu medida</li>
@@ -10,11 +10,11 @@
   <section class="wave wave-white-bottom">
     <?php get_template_part('template-parts/main-section'); ?>
   </section>
-  <section class="wave wave-white py-5">
+  <section class="wave wave-dark-bottom py-5">
     <div class="container">
       <div class="row">
         <div class="col">
-          <staff-page page="nutricion"></staff-page>
+          <staff-page page="deportologia"></staff-page>
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@
         <div class="col-md-8">
           <h2 class="text-center subtitle">Conoce los servicios que tenemos para ti</h2>
         </div>
-      </row>
+      </div>
       <div class="row justify-content-center mt-4 pb-5">
         <div class="col-md-8">
           <plans-section></plans-section>
