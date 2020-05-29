@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
   `)
 
   $('#search-button').on('click', function (e) {
-    toggleClass()
+    $('#search-form').toggleClass('show')
   })
 
   $('#search-form').find('i').on('click', function (e) {
@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
       $('#search-form').submit()
     }
     if($(this).hasClass('fa-times')) {
-      toggleClass()
+      $('#search-form').toggleClass('show')
     }
   })
 
@@ -181,11 +181,6 @@ jQuery(document).ready(function ($) {
         }
       }
     });
-
-  function toggleClass() {
-    $('#search-form').toggleClass('show')
-    $('#search-button').toggleClass('d-none')
-  }
 
   function scrollFunction() {
     var transition = 'width 200ms ease-in-out, height 200ms ease-in-out'
