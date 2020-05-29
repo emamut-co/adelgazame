@@ -8,7 +8,7 @@
                 <a href="<?php echo get_option('instagram') ?>" class="text-blue"><i class="fab fa-instagram fa-2x"></i></a>
               </p>
               <p class="mt-5 text-white">
-                <a href="#" class="text-white">Terminos y condiciones</a> | <a href="#" class="text-white">Política de privacidad</a>
+                <a href="#" class="text-white">Términos y condiciones</a> | <a href="#" class="text-white">Política de privacidad</a>
               </p>
             </div>
             <div class="col-md-4">
