@@ -16,7 +16,7 @@
     </script>
 
     <?php include('menu.php') ?>
-    <div class="container-fluid px-0" id="app" v-cloak>
+    <div class="container-fluid px-md-0 overflow-hidden" id="app" v-cloak>
       <ul id="social" class="d-none d-md-block">
         <li>
           <a href="<?php echo get_option('facebook') ?>" target="_blank"><i class="fab fa-facebook fa-2x text-white"></i></a>

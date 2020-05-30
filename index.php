@@ -6,20 +6,21 @@
       </div>
     </div>
   </section>
-  <section class="container wave wave-white pt-5">
-    <div class="row mt-5">
-      <div class="col">
-        <h2 class="text-center subtitle">¿Quiénes somos?</h2>
+  <section class="wave wave-white pt-5">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col">
+          <h2 class="text-center subtitle">¿Quiénes somos?</h2>
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-center mt-4">
+      <div class="row justify-content-center mt-4">
         <div class="col-md-8">
           <staff-section></staff-section>
         </div>
       </div>
     </div>
   </section>
-  <section class="pt-5 mt-expand">
+  <section class="pt-5 mw-100 overflow-hidden mt-expand">
     <div class="row">
       <div class="col">
         <h2 class="text-center subtitle">Mapa</h2>
