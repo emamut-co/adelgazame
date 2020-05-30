@@ -2,7 +2,7 @@
   <section class="dark wave wave-dark">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col pt-5 mt-expand">
           <h2 class="text-center subtitle text-rose">¡Llena el formulario <br><small class="text-white">y recibe atención personalizada!</small></h2>
         </div>
       </div>
