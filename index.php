@@ -20,7 +20,7 @@
       </div>
     </div>
   </section>
-  <section class="pt-5 mw-100 overflow-hidden mt-expand">
+  <section class="pt-5 mt-expand">
     <div class="row">
       <div class="col">
         <h2 class="text-center subtitle">Mapa</h2>
