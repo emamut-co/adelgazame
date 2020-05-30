@@ -1,12 +1,12 @@
 <?php get_header() ?>
-  <section class="dark wave wave-contact-section">
+  <section class="dark wave wave-dark">
     <div class="container">
       <div class="row">
         <div class="col">
           <h2 class="text-center subtitle text-rose">¡Llena el formulario <br><small class="text-white">y recibe atención personalizada!</small></h2>
         </div>
       </div>
-      <div class="row justify-content-center mt-4">
+      <div class="row justify-content-center mt-4 pb-5">
         <div class="col-md-5">
           <p class="text-white w-50">
             Asume el reto de <strong>sentirte</strong>
@@ -27,6 +27,7 @@
       </div>
     </div>
   </section>
+  <section class="wave wave-contact-section"></section>
   <section class="wave wave-gray">
     <div class="row">
       <div class="col">
