@@ -20,7 +20,7 @@ function style() {
 
 function watch() {
   browserSync.init({
-    proxy: 'http://localhost/workspace/GESTION/adelgazame/',
+    proxy: 'http://localhost/GESTION/adelgazame/',
     open: false
   });
   gulp.watch('src/sass/**/*.sass', style)
