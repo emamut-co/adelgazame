@@ -1,14 +1,6 @@
-<?php get_header();
-  set_query_var('sideContent', '<h2 class="subtitle">
-          Baja de peso <span class="caveat text-secondary">ahora</span> sin cirugía Balón intragástrico
-        </h2>
-        <ul class="mt-4">
-          <li>Un procedimiento eficaz, indoloro y mínimamente invasivo</li>
-          <li>Permite bajar de peso rápido y de forma segura</li>
-          <li>En apenas 6 meses, puedes llegar a perder hasta 20 kg</li>
-        </ul>'); ?>
+<?php get_header(); ?>
   <section class="wave wave-dark-bottom">
-    <?php get_template_part('template-parts/main-section'); ?>
+    <main-section page="balon-intragastrico"></main-section>
   </section>
   <section class="py-5 dark wave wave-dark">
     <div class="row pt-5">

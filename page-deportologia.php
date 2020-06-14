@@ -1,14 +1,6 @@
-<?php get_header();
-  set_query_var('sideContent', '<h2 class="subtitle">
-          ¿List@ para llegar a tu <span class="caveat text-primary">peso ideal?</span>
-        </h2>
-        <ul class="mt-4">
-          <li>Entrenamiento hecho a tu medida</li>
-          <li>Nos adaptamos a tus horarios</li>
-          <li>Mejora tu calidad de vida</li>
-        </ul>'); ?>
+<?php get_header(); ?>
   <section class="wave wave-white-bottom">
-    <?php get_template_part('template-parts/main-section'); ?>
+    <main-section page="deportologia"></main-section>
   </section>
   <section class="wave wave-dark-bottom py-5">
     <div class="container">

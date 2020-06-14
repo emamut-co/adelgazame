@@ -1,14 +1,6 @@
-<?php get_header();
-  set_query_var('sideContent', '<h2 class="subtitle">
-          Aliméntate sin <span class="caveat text-secondary">condiciones</span>
-        </h2>
-        <ul class="mt-4">
-          <li>Aprende a comer deliciosamente nutritivo</li>
-          <li>Mejora tu salud con una alimentación correcta</li>
-          <li>Nutre tu día a día</li>
-        </ul>'); ?>
+<?php get_header(); ?>
   <section class="wave wave-white-bottom">
-    <?php get_template_part('template-parts/main-section'); ?>
+    <main-section page="nutricion"></main-section>
   </section>
   <section class="wave wave-dark-bottom py-5">
     <div class="container">

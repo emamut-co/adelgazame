@@ -97,3 +97,25 @@ function get_plans($request)
 
   return $post_array;
 }
+
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'page/v1/', 'get', array(
+    'methods' => 'GET',
+    'callback' => 'get_page_content'
+  ));
+});
+
+function get_page_content($request)
+{
+  $args = array(
+    'post_type'     => 'page',
+    'name'          => $request['page']
+  );
+
+  $post_array = new WP_Query($args);
+  $post_array = $post_array->posts[0];
+
+  $post_array->post_image = get_the_post_thumbnail_url($post_array->ID);
+
+  return $post_array;
+}
