@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  if (window.width > 768)
+  if (window.innerWidth > 768)
     window.onscroll = function () { scrollFunction() }
 
   $('#navbar-main').find('.collapse.navbar-collapse').append(`
