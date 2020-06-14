@@ -47,6 +47,16 @@ function get_staff($request)
     'meta_value'      => $request['page']
   );
 
+  $args = array(
+    'post_type' => 'staff',
+    'meta_query' => array(
+      array(
+        'key' => 'staff_page',
+        'value' => $request['page']
+      ),
+    ),
+  );
+
   $post_array = new WP_Query($args);
   $post_array = $post_array->posts;
 
