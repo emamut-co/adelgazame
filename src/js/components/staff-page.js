@@ -38,10 +38,10 @@ Vue.component('staffPage', {
         :perPageCustom="[[360, 1], [768, 1]]">
           <slide class="p-2" v-for="(staff, key) in staffArray" :key="key">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6">
                 <img :src="staff.custom_fields.staff_big_image_url[0]" class="img-fluid" alt="" />
               </div>
-              <div class="col-6 my-auto">
+              <div class="col-md-6 my-auto">
                 <h5 class="text-primary align-self-center">
                   <small class="text-muted">{{ staff.custom_fields.staff_treatment[0] }}</small><br />
                   <strong>{{ staff.post_title }}</strong>
