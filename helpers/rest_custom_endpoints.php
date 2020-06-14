@@ -41,15 +41,10 @@ add_action( 'rest_api_init', function () {
 
 function get_staff($request)
 {
-  $perPage = -1;
-  if(!empty($request['page']))
-    $perPage = 1;
-
   $args = array(
     'post_type'       => 'staff',
     'meta_key'        => 'staff_page',
-    'meta_value'      => $request['page'],
-    'posts_per_page'  => $perPage
+    'meta_value'      => $request['page']
   );
 
   $post_array = new WP_Query($args);
@@ -74,8 +69,6 @@ add_action( 'rest_api_init', function () {
 
 function get_plans($request)
 {
-
-
   $args = array(
     'post_type'     => 'plans',
     'tax_query'     =>

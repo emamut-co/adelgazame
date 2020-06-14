@@ -68,7 +68,7 @@
       </div>
       <div class="row justify-content-center mt-4 pb-5">
         <div class="col-md-8">
-          <plans-section></plans-section>
+          <plans-section page="nutricion"></plans-section>
         </div>
       </div>
     </div>

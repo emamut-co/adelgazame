@@ -1,4 +1,5 @@
 Vue.component('plansSection', {
+  props: ['page'],
   data() {
     return {
       plansArray: []
@@ -7,7 +8,7 @@ Vue.component('plansSection', {
   mounted() {
     let self = this
 
-    axios.get(siteURL + '/wp-json/plans/v1/get')
+    axios.get(siteURL + '/wp-json/plans/v1/get?page=' + this.page)
       .then(function (response) {
         self.plansArray = response.data
       })
