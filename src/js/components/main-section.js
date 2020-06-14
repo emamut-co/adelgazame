@@ -20,7 +20,7 @@ Vue.component('mainSection', {
           <div v-html="pageContent.post_content"></div>
           <div class="contact-form-container p-4 mt-4">
             <h3 class="text-center form-title text-blue mb-4">¡Te llamaremos!</h3>
-            [contact-form-7 id="6" title="Principal"]
+            ${contactForm}
           </div>
         </div>
         <img src="${themePath}/img/scroll-down.png" id="scroll-down" alt="" class="img-fluid pulse"/>

@@ -9,12 +9,6 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <script>
-      let siteURL = '<?php echo get_site_url() ?>',
-        themePath = '<?php echo get_template_directory_uri() ?>',
-        mapCoordinates = '<?php echo get_option('coordinates') ?>';
-    </script>
-
     <?php include('menu.php') ?>
     <div class="container-fluid px-0 overflow-hidden" id="app" v-cloak>
       <ul id="social" class="d-none d-md-block">

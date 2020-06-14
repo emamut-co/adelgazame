@@ -164,3 +164,13 @@ function emamut_numeric_posts_nav() {
 
   echo '</ul></nav>' . "\n";
 }
+
+add_action('wp_head', 'myplugin_ajaxurl');
+function myplugin_ajaxurl() {
+  echo "<script type=\"text/javascript\">
+          let siteURL = '" . get_site_url() . "',
+          themePath = '" . get_template_directory_uri() ."',
+          mapCoordinates = '" . get_option('coordinates') . "',
+          contactForm = `" . do_shortcode('[contact-form-7 id="6" title="Principal"]') . "`
+        </script>";
+}
