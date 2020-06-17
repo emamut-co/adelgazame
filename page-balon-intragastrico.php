@@ -5,8 +5,8 @@
   <section class="py-5 dark wave wave-dark">
     <div class="row pt-5">
       <div class="col">
-        <h2 class="text-center text-rose subtitle">Beneficios y características <br>
-        <small class="text-white">del balón gástrico</small></h2>
+        <h2 class="text-center text-rose subtitle">Balón Gástrico Digerible en Cápsula <br>
+        <small class="text-white">beneficios y carácteristicas</small></h2>
       </div>
     </div>
     <div class="container">
