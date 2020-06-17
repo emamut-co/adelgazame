@@ -10,6 +10,8 @@ function get_slider($request)
 {
   $args = array(
     'post_type'   => 'slide',
+    'post_status' => 'publish',
+    'posts_per_page' => -1
   );
   $post_array = new WP_Query($args);
 
