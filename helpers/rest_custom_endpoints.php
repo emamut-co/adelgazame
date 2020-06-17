@@ -78,13 +78,33 @@ add_action( 'rest_api_init', function () {
 function get_plans($request)
 {
   $args = array(
-    'post_type'     => 'plans',
-    'tax_query'     =>
-      array(
-        'taxonomy'  => 'category',
-        'field'     => 'slug',
-        'terms'     => $request['page'],
-      )
+    'post_type'      => 'plans',
+    'posts_per_page' => -1,
+    'category_name'  => $request['page']
+  );
+
+  $post_array = new WP_Query($args);
+  $post_array = $post_array->posts;
+
+  foreach ($post_array as $post)
+    $post->post_image = get_the_post_thumbnail_url($post->ID);
+
+  return $post_array;
+}
+
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'benefits/v1/', 'get', array(
+    'methods' => 'GET',
+    'callback' => 'get_benefits'
+  ));
+});
+
+function get_benefits($request)
+{
+  $args = array(
+    'post_type'      => 'benefits',
+    'posts_per_page' => -1,
+    'category_name'  => $request['page']
   );
 
   $post_array = new WP_Query($args);

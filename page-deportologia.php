@@ -19,48 +19,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row mt-5 pt-5">
-        <div class="col-md-4 text-white">
-          <div class="w-100 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/deportologia1.png" alt="" class="img-fluid">
-          </div>
-          <p class="my-5 py-3">
-            <small>
-              Realizar actividad física de forma regular, permite mantener una buena salud, fomenta la disciplina
-              y fortalece el carácter. También favorece el bienestar mental, mejora la memoria y la rapidez de las ideas.
-              Es un aliado ideal para aumentar la autoestima.
-            </small>
-          </p>
-        </div>
-        <div class="col-md-4 text-white">
-          <div class="w-100 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/deportologia2.png" alt="" class="img-fluid">
-          </div>
-          <p class="my-5 py-3">
-            <small>
-              <p>
-                Los ejercicios para mejorar la forma física, se deben realizar de forma progresiva, en dependencia de la
-                condición y necesidades de cada cual.
-              </p>
-              <p>
-                El ejercicio físico también incrementa la densidad ósea, ayuda a mantener el peso corporal, mejora la
-                flexibilidad y la movilidad de las articulaciones, reduce la sensación de fatiga, entre otros.
-              </p>
-            </small>
-          </p>
-        </div>
-        <div class="col-md-4 text-white">
-          <div class="w-100 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/deportologia3.png" alt="" class="img-fluid">
-          </div>
-          <p class="my-5 py-3">
-            <small>
-              Nuestro cerebro demora aproximadamente 1 mes en crear un hábito. <strong>¿No estás adaptad@ o no tienes el hábito del ejercicio físico?</strong> <br>
-              En Clínica Adelgáza.me te ayudamos <strong>¡TÚ PUEDES LOGRARLO! Asume el reto</strong>. Supera con nosotros la barrera del primer mes.
-            </small>
-          </p>
-        </div>
-      </div>
+      <benefits-section page="deportologia"></benefits-section>
     </div>
   </section>
   <?php get_template_part('template-parts/calculator-section') ?>

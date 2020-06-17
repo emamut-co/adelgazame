@@ -15,39 +15,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row mt-5 pt-5">
-        <div class="col-md-4 text-white">
-          <div class="w-100 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/nutricion1.png" alt="" class="img-fluid">
-          </div>
-          <p class="my-5 py-3">
-              Alimentarse de manera saludable permite mantener la mente despierta. El cerebro necesita determinados
-              nutrientes para llevar a cabo sus funciones, por lo que llevar una dieta adecuada permite el flujo
-              constante de dichos nutrientes, generando un óptimo funcionamiento del organismo.
-          </p>
-        </div>
-        <div class="col-md-4 text-white">
-          <div class="w-100 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/nutricion2.png" alt="" class="img-fluid">
-          </div>
-          <p class="my-5 py-3">
-              La selección adecuada de los productos que ingerimos proporciona una mayor capacidad de respuesta
-              del sistema inmune, lo que permite que éste se defienda eficientemente de los agentes extraños.
-              Así se reduce el riesgo de padecer infecciones.
-          </p>
-        </div>
-        <div class="col-md-4 text-white">
-          <div class="w-100 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/nutricion3.png" alt="" class="img-fluid">
-          </div>
-          <p class="my-5 py-3">
-              Determinados nutrientes como el hierro, ácido fólico, algunas vitaminas del grupo B, o los ácidos
-              grasos omega-3, influyen en nuestro estado de ánimo. En esto radica la importancia de llevar una
-              dieta variada, pues con la cantidad necesaria de nutrientes, se mantendrá el equilibrio en nuestro
-              estado de ánimo y una actitud positiva en nosotros.
-          </p>
-        </div>
-      </div>
+      <benefits-section page="nutricion"></benefits-section>
     </div>
   </section>
   <?php get_template_part('template-parts/calculator-section') ?>
