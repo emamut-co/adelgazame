@@ -10,7 +10,6 @@ function get_slider($request)
 {
   $args = array(
     'post_type'   => 'slide',
-    'post_status' => 'publish',
     'posts_per_page' => -1
   );
   $post_array = new WP_Query($args);
@@ -44,20 +43,17 @@ add_action( 'rest_api_init', function () {
 function get_staff($request)
 {
   $args = array(
-    'post_type'       => 'staff',
-    'meta_key'        => 'staff_page',
-    'meta_value'      => $request['page']
+    'post_type' => 'staff',
+    'posts_per_page' => -1
   );
 
-  $args = array(
-    'post_type' => 'staff',
-    'meta_query' => array(
+  if(!empty($request['page']))
+    $args['meta_query'] = array(
       array(
         'key' => 'staff_page',
         'value' => $request['page']
-      ),
-    ),
-  );
+      )
+    );
 
   $post_array = new WP_Query($args);
   $post_array = $post_array->posts;

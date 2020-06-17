@@ -8,7 +8,7 @@ Vue.component('staffSection', {
   mounted() {
     let self = this
 
-    axios.get(siteURL + '/wp-json/staff/v1/get?page=' + this.page)
+    axios.get(siteURL + '/wp-json/staff/v1/get')
       .then(function (response) {
         self.staffArray = response.data
       })
